@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录/注册-啃啃的游戏站</title>
+	<!-- <link rel="stylesheet" href="./主页设计/css/styles.css"> -->
+	<link rel="stylesheet" href="./css/login-out-page.css">
+</head>
+<body>
+	
+	
+	
+	
+	
+    <div class="shell">
+        <div class="container a-container" id="a-container">
+            <form action="" method="" class="form" id="signin-and-signup-a-form">
+                <h2 class="form_title title">创建账号</h2>
+                <span class="form_span">选择注册方式活电子邮箱注册</span>
+                <input type="text" class="form_input" placeholder="用户名" id="signup-username">
+                <input type="email" class="form_input" placeholder="邮箱" id="signup-email">
+                <input type="password" class="form_input" placeholder="密码" id="signup-password">
+                <input type="text" class="form_input" placeholder="性别" id="signup-gender">
+                <input type="number" class="form_input" placeholder="年龄" id="signup-age">
+                <input type="text" class="form_input" placeholder="技能" id="signup-skills">
+                <input type="text" class="form_input" placeholder="电话" id="signup-phone">
+                <input type="text" class="form_input" placeholder="地址" id="signup-address">
+                <textarea class="form_input" placeholder="个人介绍" id="signup-introduction"></textarea>
+                <button type="submit" class="submit button" id="signup-button">注册</button>
+            </form>
+        </div>
+        <div class="container b-container" id="b-container">
+            <form action="" method="" class="form" id="signin-and-signup-b-form">
+                <h2 class="form_title title">登录</h2>
+                <span class="form_span">选择第三方方式或账号登录</span>
+                <input type="email" class="form_input" placeholder="邮箱" id="signin-email">
+                <input type="password" class="form_input" placeholder="密码" id="signin-password">
+                <a href="#" class="form_link">忘记密码?</a>
+                <button type="submit" class="submit button" id="signin-button">登录</button>
+            </form>
+        </div>
+        <div class="switch" id="switch-cnt">
+            <div class="switch_circle"></div>
+            <div class="switch_circle switch_circle-t"></div>
+            <div class="switch_container" id="switch-c1">
+                <h2 class="form_title title">欢迎回来！</h2>
+                <p class="description">登录后随时随地了解实时资讯<br>体验更多精彩活动</p>
+                <button class="switch_button button switch-btn">登录</button>
+            </div>
+            <div class="switch_container is-hidden" id="switch-c2">
+                <h2 class="form_title title">新用户?</h2>
+                <p class="description">输入你的信息注册账户<br>开始你的体验</p>
+                <button class="switch_button button switch-btn">注册</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login-out.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+   
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="./index.html" class="NavbarButton">首页</a>
+        <a href="./categories.html" class="NavbarButton">游戏分类</a>
+        <a href="./login-out-web.html" class="NavbarButton">登录/注册</a>
+        <a href="login.html" class="NavbarButton">登录</a>
+        <a href="./profile.html" class="NavbarButton">个人主页</a>
+        <a href="./pic_player.html" class="NavbarButton">动态轮播图</a>
+        <a href="design.html" class="NavbarButton">设计说明</a>
+    </nav>
+
+    <!-- 计算器 -->
+    <div id="cal-body">
+        <div class="input">
+            <input type="text" id="display" disabled>
+        </div>
+        <div style="padding-top: 40px;">
+            <div class="buttons">
+                <div>
+                    <button onclick="appendNumber('1')">1</button>
+                    <button onclick="appendNumber('2')">2</button>
+                    <button onclick="appendNumber('3')">3</button>
+                    <button onclick="appendOperator('+')">+</button>
+                </div>
+                <div>
+                    <button onclick="appendNumber('4')">4</button>
+                    <button onclick="appendNumber('5')">5</button>
+                    <button onclick="appendNumber('6')">6</button>
+                    <button onclick="appendOperator('-')">-</button>
+                </div>
+                <div>
+                    <button onclick="appendNumber('7')">7</button>
+                    <button onclick="appendNumber('8')">8</button>
+                    <button onclick="appendNumber('9')">9</button>
+                    <button onclick="appendOperator('*')">*</button>
+                </div>
+                <div>
+                    <button onclick="appendNumber('.')">.</button>
+                    <button onclick="appendNumber('0')">0</button>
+                    <button onclick="appendOperator('/')">/</button>
+                    <button onclick="calculate()" style="width: 130px;">=</button>
+                </div>
+                <div class="full-width">
+                    <button onclick="backspace()" style="width: 130px;">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2024 你的公司名称. 保留所有权利。</p>
+    </footer>
+
+</body>
+    <script src="js/index_main.js"></script>
+	<script src=".js"></script>
+</html>

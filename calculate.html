@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>游戏价格简易计算器</title>
+		<link rel="stylesheet" href="./css/navbar-footer.css">
+		<link rel="stylesheet" href="./css/calculate.css">
+	</head>
+	<body>
+		<!-- 导航栏 -->
+		<nav class="navbar">
+		    <a href="./index.html" class="NavbarButton">首页</a>
+		    <a href="./game_list.html" class="NavbarButton">游戏分类</a>
+		    <a href="./login-out-web.html" class="NavbarButton">登录/注册</a>
+		    <a href="./calculate.html" class="NavbarButton">计算器</a>
+		    <a href="./waterpage.html" class="NavbarButton">地平线4！！！</a>
+		    <a href="./pic_player.html" class="NavbarButton">动态轮播图</a>
+		    <a href="./aboutthiswebsite.html" class="NavbarButton">设计说明</a>
+		</nav>
+		
+		<!-- 计算器 -->
+		<div id="cal-body">
+		    <div class="input">
+		        <input type="text" id="display" disabled>
+		    </div>
+		    <div style="padding-top: 40px;">
+		        <div class="buttons">
+		            <div>
+		                <button onclick="appendNumber('1')">1</button>
+		                <button onclick="appendNumber('2')">2</button>
+		                <button onclick="appendNumber('3')">3</button>
+		                <button onclick="appendOperator('+')">+</button>
+		            </div>
+		            <div>
+		                <button onclick="appendNumber('4')">4</button>
+		                <button onclick="appendNumber('5')">5</button>
+		                <button onclick="appendNumber('6')">6</button>
+		                <button onclick="appendOperator('-')">-</button>
+		            </div>
+		            <div>
+		                <button onclick="appendNumber('7')">7</button>
+		                <button onclick="appendNumber('8')">8</button>
+		                <button onclick="appendNumber('9')">9</button>
+		                <button onclick="appendOperator('*')">*</button>
+		            </div>
+		            <div>
+		                <button onclick="appendNumber('.')">.</button>
+		                <button onclick="appendNumber('0')">0</button>
+		                <button onclick="appendOperator('/')">/</button>
+		                <button onclick="calculate()" style="width: 130px;">=</button>
+		            </div>
+		            <div class="full-width">
+		                <button onclick="backspace()" style="width: 130px;">退格</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		
+		
+		<!-- 页脚 -->
+		<footer class="footer">
+			<!-- 电子时钟 -->
+			<section class="clock-section">
+			    <div class="clock" id="clock">
+			        <!-- 电子时钟 -->
+			    </div>
+			</section>
+		    <p>版权所有 © 2024 游戏介绍网站</p>
+		</footer>
+	</body>
+	<script src="./js/index_main.js"></script>
+	<script src="./js/calculate.js"></script>
+</html>

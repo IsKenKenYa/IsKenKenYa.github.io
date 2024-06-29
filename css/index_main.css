@@ -1,0 +1,469 @@
+/* 基本样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+	background-image: url(./img/BGimg-horizon4-car430km.png);
+}
+
+
+
+/* 头部样式 */
+.header {
+    background-color: #0a59f7;
+    color: white;
+    text-align: center;
+    padding: 20px;
+	backdrop-filter: blur(10px);
+	transform: rotate(calc(var(--r) * 1deg));
+	border-radius: 30px;
+	background: linear-gradient(#0A59F7, transparent);
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+/* 内容样式 */
+.content {
+    padding: 20px;
+}
+
+.team-section, .carousel-section, .clock-section {
+    margin-bottom: 20px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team-member {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+/* 轮播图样式 */
+.carousel {
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* 时钟样式 */
+.clock {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* 中间部分黄色的团队介绍的代码，需要修改部分 */
+
+.team-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team .xiaozu_team_card {
+    color: #1b1b1b;
+    width: 190px;
+    height: 254px;
+    position: relative;
+    outline: 6px solid #f5f5f5;
+    border-radius: 8px;
+    line-height: 150%;
+    padding: 16px;
+    background: #c0c0c0;
+    background-blend-mode: multiply;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+    border-radius: 30px;
+    background: linear-gradient(#c0c0c0, transparent);
+    transition: background-color 1s ease-in-out;
+    overflow: hidden;
+}
+
+.xiaozu_team_card-front {
+    bottom: 16px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.xiaozu_team_card-back {
+    transform: translateX(120%);
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+/*Text*/
+.xiaozu_team_card_title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/*Text divider*/
+.xiaozu_team_card_title::after {
+    content: "";
+    display: block;
+    width: 50%;
+    border-radius: 50%;
+    height: 2px;
+    margin: 2px auto;
+    background-color: #1b1b1b;
+}
+
+/*Hover*/
+.xiaozu_team_card:hover {
+    background-color: #1b1b1b25;
+}
+
+.xiaozu_team_card:hover .xiaozu_team_card-front {
+    transform: translateX(-100%);
+}
+
+.xiaozu_team_card:hover .xiaozu_team_card-back {
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+/* Existing styles */
+
+/* 新的游戏展示组件样式 */
+.four_games_pic_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.four_games_pic {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+  pointer-events: auto;
+  margin: 10px;
+}
+
+.four_games_pic:hover > #four_games_picture_card-code {
+  opacity: 0;
+}
+
+.four_games_picture_card {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform-origin: center;
+  transition: 0.3s ease-in-out;
+  box-sizing: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.four_games_picture_card span {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+
+/* PUBG */
+#PUBG_Mobile {
+  background-image: url('./logo/PUBG/playerunknown-s-battlegrounds-pubg-mobile-logo-wallpaper-3840x2400_9.jpg');
+  rotate: 45deg;
+  translate: 212.13px 0;
+  outline: 0 solid #CECE5A;
+  z-index: 9;
+}
+
+#PUBG_Mobile:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #CECE5A;
+}
+
+#PUBGMLite {
+  background-image: url('./logo/PUBG/PUBGMLite.jpg');
+  rotate: 45deg;
+  translate: 0 212.13px;
+  outline: 0 solid #FFE17B;
+  z-index: 9;
+}
+
+#PUBGMLite:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #FFE17B;
+}
+
+#PUBGMLite span {
+  color: #1A1A1A;
+}
+
+#pubg-krafton {
+  background-image: url('https://wstatic-prod-boc.krafton.com/common/content/news/20240619/YAO6EimQ_thumb.png');
+  rotate: 45deg;
+  translate: -212.13px 0;
+  outline: 0 solid #FD8D14;
+  z-index: 9;
+}
+
+#pubg-krafton:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #FD8D14;
+}
+
+#gameofpeach {
+  background-image: url('./logo/PUBG/GP-hpjy.jpg');
+  rotate: 45deg;
+  translate: 0 -212.13px;
+  outline: 0 solid #C51605;
+  z-index: 9;
+}
+
+
+#gameofpeach:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #C51605;
+}
+
+
+
+
+
+
+/* 我的世界 */
+#JavaEdition {
+  background-image: url('./logo/Minecraft/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.webp');
+  rotate: 45deg;
+  translate: 212.13px 0;
+  outline: 0 solid #CECE5A;
+  z-index: 9;
+}
+
+#JavaEdition:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #CECE5A;
+}
+
+#minecraft_website {
+  background-image: url('./logo/Minecraft/Homepage_Discover-our-games_MC-Dungeons-KeyArt_864x864.webp');
+  rotate: 45deg;
+  translate: 0 212.13px;
+  outline: 0 solid #FFE17B;
+  z-index: 9;
+}
+
+#minecraft_website:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #FFE17B;
+}
+
+#minecraft span {
+  color: #1A1A1A;
+}
+
+#Minecraft_Education {
+  background-image: url('./logo/Minecraft/Homepage_Discover-our-games_MC-Education-KeyArt_864x864.webp');
+  rotate: 45deg;
+  translate: -212.13px 0;
+  outline: 0 solid #FD8D14;
+  z-index: 9;
+}
+
+#Minecraft_Education:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #FD8D14;
+}
+
+#Minecraft_China {
+  background-image: url('./logo/Minecraft/Homepage_Discover-our-games_MC-Legends-KeyArt_864x864.webp');
+  rotate: 45deg;
+  translate: 0 -212.13px;
+  outline: 0 solid #C51605;
+  z-index: 9;
+}
+
+#Minecraft_China:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #C51605;
+}
+
+
+
+/* GTA */
+#GTAVI {
+  background-image: url('./logo/GTA/GTAVI.jpg');
+  rotate: 45deg;
+  translate: 212.13px 0;
+  outline: 0 solid #CECE5A;
+  z-index: 9;
+}
+
+#GTAVI:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #CECE5A;
+}
+
+#GTAV {
+  background-image: url('./logo/GTA/GTAV.jpg');
+  rotate: 45deg;
+  translate: 0 212.13px;
+  outline: 0 solid #FFE17B;
+  z-index: 9;
+}
+
+#GTAV:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #FFE17B;
+}
+
+#GTAV span {
+  color: #1A1A1A;
+}
+
+#GTAOL {
+  background-image: url('./logo/GTA/GTAOL.jpg');
+  rotate: 45deg;
+  translate: -212.13px 0;
+  outline: 0 solid #FD8D14;
+  z-index: 9;
+}
+
+#GTAOL:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #FD8D14;
+}
+
+#GTATE {
+  background-image: url('./logo/GTA/GTA虫豸版.jpg');
+  rotate: 45deg;
+  translate: 0 -212.13px;
+  outline: 0 solid #C51605;
+  z-index: 9;
+}
+
+#GTATE:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #C51605;
+}
+
+
+/* 其他游戏 */
+#L4D2 {
+  background-image: url('./logo/Left4Dead2.jpg');
+  rotate: 45deg;
+  translate: 212.13px 0;
+  outline: 0 solid #CECE5A;
+  z-index: 9;
+}
+
+#L4D2:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #CECE5A;
+}
+
+#PartyAnimals {
+  background-image: url('./logo/PartyAnimals.webp');
+  rotate: 45deg;
+  translate: 0 212.13px;
+  outline: 0 solid #FFE17B;
+  z-index: 9;
+}
+
+#PartyAnimals:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #FFE17B;
+}
+
+#PartyAnimals span {
+  color: #1A1A1A;
+}
+
+#PalWorld {
+  background-image: url('./logo/Palworld.jpg');
+  rotate: 45deg;
+  translate: -212.13px 0;
+  outline: 0 solid #FD8D14;
+  z-index: 9;
+}
+
+#PalWorld:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #FD8D14;
+}
+
+#HeiShenHua {
+  background-image: url('./logo/HeiShenHua.jpg');
+  rotate: 45deg;
+  translate: 0 -212.13px;
+  outline: 0 solid #C51605;
+  z-index: 9;
+}
+
+#HeiShenHua:hover {
+  translate: 0 0;
+  rotate: 0deg;
+  z-index: 99;
+  outline: 20px solid #C51605;
+}

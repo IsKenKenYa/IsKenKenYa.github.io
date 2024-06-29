@@ -1,0 +1,197 @@
+/* 新样式组件 */
+        .buy-game-product-container {
+            position: relative;
+            margin: 20px;
+        }
+
+        .buy-game-card {
+            font-family: Lato, sans-serif;
+            position: relative;
+            width: 290px;
+            height: 400px;
+            background: #232323;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .buy-game-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+			
+			background-image: url(./logo/nvidia-logo-vert.png);
+			background-blend-mode: color-burn;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-color: rgb(118,185,0);
+            /* background: var(--buy-game-product-color); */
+            clip-path: circle(150px at 80% 20%);
+            transition: .5s ease-in-out;
+        }
+
+        .buy-game-card:hover:before {
+            clip-path: circle(300px at 80% -20%);
+        }
+
+        .buy-game-title {
+            position: relative;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #fff;
+            margin-top: 12px;
+        }
+
+        .buy-game-bg-title {
+            font-size: 10em;
+            font-weight: 900;
+            font-style: italic;
+            color: rgba(255,255,255,.04);
+            position: absolute;
+            max-width: 120%;
+            top: -150%;
+            transition: .6s;
+        }
+
+        .buy-game-card:hover .buy-game-bg-title {
+            transform: translateY(60%);
+        }
+
+        .buy-game-photo {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 100%;
+            height: 220px;
+            transition: .5s;
+        }
+
+        .buy-game-card:hover .buy-game-photo {
+            top: 0%;
+            transform: translateY(0%);
+        }
+
+        .buy-game-photo img {
+            position: absolute;
+            width: 220px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-25deg);
+            transition: .5s;
+			/* background-image: url(./logo/Left4Dead2.jpg); */
+        }
+
+        .buy-game-card:hover .buy-game-photo img {
+            width: 260px;
+            top: 56%;
+        }
+
+        .buy-game-content {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            transition: 1s;
+            z-index: 5;
+        }
+
+        .buy-game-card:hover .buy-game-content {
+            height: 190px;
+        }
+
+        .buy-game-feature {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 20px;
+            transition: .5s;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .buy-game-card:hover .buy-game-feature {
+            visibility: visible;
+            opacity: 1;
+            transition-delay: .5s;
+        }
+
+        .buy-game-feature div {
+            color: #fff;
+            font-weight: 300;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-right: 10px;
+        }
+
+        .buy-game-feature span {
+            min-width: 20px;
+            padding: 0 4px;
+            height: 26px;
+            text-align: center;
+            line-height: 26px;
+            font-size: 14px;
+            display: inline-block;
+            color: #111;
+            background: #fff;
+            margin: 0 5px;
+            transition: .4s;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .buy-game-feature span:hover {
+            color: #000;
+            background: var(--buy-game-product-color);
+        }
+
+        .buy-game-btn-buy {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #fff;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #111;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: 0.5s;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .buy-game-card:hover .buy-game-btn-buy {
+            opacity: 1;
+            transform: translateY(0px);
+            transition: 0.5s;
+            transition-delay: 0.5s;
+        }
+
+        .buy-game-card:hover .buy-game-btn-buy:hover {
+            background: var(--buy-game-product-color);
+            transition-delay: 0;
+            transition: 0.05s;
+        }
+
+        .buy-game-product-1 {
+            --buy-game-product-color: #EB6CA4;
+        }
+
+        .buy-game-size span {
+            cursor: pointer;
+            z-index: 50;
+        }
+
+        .buy-game-feature .buy-game-tt:hover {
+            background: #038dff;
+        }
+
+        .buy-game-feature .buy-game-ttt:hover {
+            background: #09ff0d;
+        }

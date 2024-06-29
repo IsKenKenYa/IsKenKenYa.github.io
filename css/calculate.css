@@ -1,0 +1,123 @@
+body {
+            font-family: Arial, sans-serif;
+			
+			
+			background-image: url(./img/BGimg-horizon4-carseaAudi.png);
+
+
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+        #cal-body {
+            width: 400px;
+            border-radius: 20px;
+			
+            backdrop-filter: blur(10px);
+            transform: rotate(calc(var(--r) * 1deg));
+            border-radius: 30px;
+            background: linear-gradient(#dde1e7, transparent);
+			
+            box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+            padding: 45px;
+            margin: 40px auto;
+        }
+        .input input {
+            height: 50px;
+            width: 100%;
+			
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transform: rotate(calc(var(--r) * 1deg));
+            border-radius: 30px;
+            background: linear-gradient(#dde1e7, transparent);
+			
+            box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+            border: 0;
+            color: rgb(116, 116, 116);
+            font-size: 1.5rem;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+        .input input:focus {
+            outline: none;
+			
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transform: rotate(calc(var(--r) * 1deg));
+            border-radius: 30px;
+            background: linear-gradient(#dde1e7, transparent);
+			
+            box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+        }
+        .buttons button {
+            cursor: pointer;
+            height: 60px;
+            width: 60px;
+            border: 0;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            
+			border-radius: 10px;
+			backdrop-filter: blur(10px);
+			transform: rotate(calc(var(--r) * 1deg));
+			border-radius: 30px;
+			background: linear-gradient(#dde1e7, transparent);
+			
+            box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+            color: rgb(137, 137, 137);
+            margin: 5px;
+        }
+        .buttons button:focus {
+            
+			border-radius: 10px;
+			backdrop-filter: blur(10px);
+			transform: rotate(calc(var(--r) * 1deg));
+			border-radius: 30px;
+			background: linear-gradient(#dde1e7, transparent);
+			
+            box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px -5px 9px rgba(94,104,121,0.3);
+        }
+        .buttons {
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .buttons div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .buttons div button {
+            margin: 5px;
+        }
+        .buttons div.full-width {
+            justify-content: center;
+        }
+		

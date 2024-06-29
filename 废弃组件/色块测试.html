@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+			.four_games_pic {
+			  position: relative;
+			  width: 300px;
+			  height: 300px;
+			  border-radius: 1rem;
+			  overflow: hidden;
+			  pointer-events: auto;
+			}
+			
+			.four_games_pic:hover > #four_games_picture_card-code {
+			  opacity: 0;
+			}
+			
+			.four_games_picture_card {
+			  position: absolute;
+			  width: 300px;
+			  height: 300px;
+			  transform-origin: center;
+			  transition: 0.3s ease-in-out;
+			  box-sizing: inline-block;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			  background-size: cover;
+			  background-position: center;
+			}
+			
+			.four_games_picture_card span {
+			  four_games_picture_card: white;
+			  font-weight: 600;
+			  letter-spacing: 1px;
+			}
+			
+			#rockstar-games {
+			  background-image: url('./img/Rockstar_Games.webp');
+			  rotate: 45deg;
+			  translate: 212.13px 0;
+			  outline: 0 solid #CECE5A;
+			  z-index: 9;
+			}
+			
+			#rockstar-games:hover {
+			  translate: 0 0;
+			  rotate: 0deg;
+			  z-index: 99;
+			  outline: 20px solid #CECE5A;
+			}
+			
+			#minecraft {
+			  background-image: url('https://zh.minecraft.wiki/images/Bedrock_Edition_Google_Play_icon.png?20070');
+			  rotate: 45deg;
+			  translate: 0 212.13px;
+			  outline: 0 solid #FFE17B;
+			  z-index: 9;
+			}
+			
+			#minecraft:hover {
+			  translate: 0 0;
+			  rotate: 0deg;
+			  z-index: 99;
+			  outline: 20px solid #FFE17B;
+			}
+			
+			#minecraft span {
+			  four_games_picture_card: #1A1A1A;
+			}
+			
+			#pubg-krafton {
+			  background-image: url('https://wstatic-prod-boc.krafton.com/common/content/news/20240619/YAO6EimQ_thumb.png');
+			  rotate: 45deg;
+			  translate: -212.13px 0;
+			  outline: 0 solid #FD8D14;
+			  z-index: 9;
+			}
+			
+			#pubg-krafton:hover {
+			  translate: 0 0;
+			  rotate: 0deg;
+			  z-index: 99;
+			  outline: 20px solid #FD8D14;
+			}
+			
+			#gameofpeach {
+			  background-image: url('https://game.gtimg.cn/images/gp/public/logo.png');
+			  rotate: 45deg;
+			  translate: 0 -212.13px;
+			  outline: 0 solid #C51605;
+			  z-index: 9;
+			}
+			
+			#gameofpeach:hover {
+			  translate: 0 0;
+			  rotate: 0deg;
+			  z-index: 99;
+			  outline: 20px solid #C51605;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="four_games_pic_container">
+		  <div class="four_games_pic">
+		    <div id="rockstar-games" class="four_games_picture_card">
+		      <span>#CECE5A</span>
+		    </div>
+		    <div id="minecraft" class="four_games_picture_card">
+		      <span>#FFE17B</span>
+		    </div>
+		    <div id="pubg-krafton" class="four_games_picture_card">
+		      <span>#FD8D14</span>
+		    </div>
+		    <div id="gameofpeach" class="four_games_picture_card">
+		      <span>#C51605</span>
+		    </div>
+		    <div id="four_games_picture_card-code">
+		      <div id="four_games_picture_card-code-bg"></div>
+		      <div id="four_games_picture_card-code-text"></div>
+		    </div>
+		  </div>
+		  <div id="footer">
+		    <!-- <div id="bookmarks">
+		      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentfour_games_picture_card" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+		      </svg>
+		      <span>53421</span>
+		    </div>
+		    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentfour_games_picture_card" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		      <circle cx="12" cy="12" r="1"></circle>
+		      <circle cx="19" cy="12" r="1"></circle>
+		      <circle cx="5" cy="12" r="1"></circle>
+		    </svg>
+		  </div> -->
+		</div>
+
+		
+	</body>
+</html>
