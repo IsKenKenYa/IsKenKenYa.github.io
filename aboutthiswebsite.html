@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首页 - 啃啃的游戏站</title>
+    <title>关于此网站/设计说明 - 啃啃的游戏站</title>
     <!-- 引入CSS文件 -->
     <link rel="stylesheet" href="css/index_main.css">
 	<link rel="stylesheet" href="./css/privacy_serverce.css">
 	<link rel="stylesheet" href="./css/navbar-footer.css">
 	<link rel="stylesheet" href="./css/music_control.css">
 	<link rel="stylesheet" href="./css/githubcard.css">
+	<link rel="stylesheet" href="./css/TextShine.css">
+	<link rel="stylesheet" href="./css/LoaderText.css">
+	<link rel="stylesheet" href="./css/aboutwebsite.css">
 </head>
 <body>
    <!-- 导航栏 -->
@@ -25,7 +28,8 @@
 
     <!-- 头部介绍 -->
     <header class="header">
-        <h1>关于我们-啃啃的游戏站</h1>
+        关于我们-啃啃的游戏站
+</div>
         <p>代码由软件技术2班 啃啃团队 史高宇 23013209；黄琦阳 23013251 共同编写</p>
     </header>
 
@@ -39,35 +43,38 @@
             <div class="team">
                 <div class="xiaozu_team_card">
                     <div class="xiaozu_team_card-front">
-                        <p class="xiaozu_team_card_title">史高宇</p>
+						<p class="xiaozu_team_card_title">代码主力</p>
+                        <div class="shine">史高宇</div>
                         <p class="xiaozu_team_card_subtitle">软件技术2班</p>
                         <p class="xiaozu_team_card_subtitle">23013209</p>
 						<p class="xiaozu_team_card_subtitle">QQ:2127916186</p>
 						<p class="xiaozu_team_card_subtitle">GitHub: IsKenKenYa</p>
                     </div>
                     <div class="xiaozu_team_card-back">
-                        <p>负责主页设计以及登录页的设计，以及登录页使用LocalStorage存储账户密码用于校验。</p>
+                        <p>负责主页设计以及登录页的设计，以及登录页使用LocalStorage存储账户密码用于校验。绝大多数结构、美术、UI方面的构建，Git代码版本控制。</p>
                     </div>
                 </div>
                 <div class="xiaozu_team_card">
                     <div class="xiaozu_team_card-front">
-                        <p class="xiaozu_team_card_title">黄琦阳</p>
+						<p class="xiaozu_team_card_title">指导、代码从力</p>
+                        <div class="shine">黄琦阳</div>
                         <p class="xiaozu_team_card_subtitle">软件技术2班</p>
                         <p class="xiaozu_team_card_subtitle">23013251</p>
 						<p class="xiaozu_team_card_subtitle">QQ：2607006317</p>
                     </div>
                     <div class="xiaozu_team_card-back">
-                        <p>负责部分页面的JavaScript代码的重构。</p>
+                        <p>负责部分页面的JavaScript代码的重构；对于美术、UI设计、代码方面的指导、监督、建议；功能的意见；绝对的页面重构，设计，美化；代码的易读性更改。提交issue和PR，创建分支完善代码！</p>
                     </div>
                 </div>
                 <div class="xiaozu_team_card">
                     <div class="xiaozu_team_card-front">
-                        <p class="xiaozu_team_card_title">和龙33</p>
+						<p class="xiaozu_team_card_title">不参与代码！！</p>
+                        <div class="shine">和龙33</div>
                         <p class="xiaozu_team_card_subtitle">美术总监</p>
                         <p class="xiaozu_team_card_subtitle">网站的美术设计（外援）</p>
                     </div>
                     <div class="xiaozu_team_card-back">
-                        <p>美术总监，由啃啃的美术生朋友来提供一些美术上的建议，不涉及代码的操作，代码有前面二位共同完成！！！</p>
+                        <p>美术总监，由啃啃的美术生朋友来提供一些美术上的建议，不涉及代码的操作，代码有前面二位共同完成！！！不涉及代码的任何操作，站在美术生和用户的角度来点评和评价网站的用户界面的设计、美术排版、优化布局等。不参与也不可能参与代码的编写、重构、完善！</p>
                     </div>
                 </div>
             </div>
@@ -104,70 +111,2578 @@
 		
 		
 		
-		<section>
-			
-			
-			
-		</section>
+										<section class="Container-PicToTextCard">
+											
+											<div class="PicToTextCard" style="  background-image: url('./css/img/AboutThisWeb/推荐游戏卡片-介绍图-CSS动画.png');">
+											  <div class="PicToTextCard__content">
+												<p class="PicToTextCard__title">多图片展示卡片
+												</p><p class="PicToTextCard__description">这个组件通过Flexbox布局组织游戏图片，定义了图片卡片的尺寸、圆角与背景填充，同时加入了鼠标悬停时的淡入淡出动画，且图片渐入时，介绍文字（标题文字）同样也渐入，当图片铺满时候，可以让用户了解该图片是什么（游戏/介绍什么），增强了用户交互体验。</p>
+											  </div>
+											</div>
+											
+											<div class="PicToTextCard" style="  background-image: url('./css/img/AboutThisWeb/三张卡片-Github和查看源代码等功能实现.png');">
+											  <div class="PicToTextCard__content">
+												<p class="PicToTextCard__title">三张展示信息卡片
+												</p><p class="PicToTextCard__description">这个组件使用一个响应式、具有视觉效果的容器布局。容器使用Flexbox居中其子元素，每个玻璃类元素代表一个半透明的卡片，有轻微的阴影和模糊背景过滤效果。卡片在:hover状态下旋转角度归零，并略微缩小边距；卡片内使用SVG的待展示网站的LOGO；</p>
+											  </div>
+											</div>
+											
+											
+											
+											<div class="PicToTextCard" style="  background-image: url('./css/img/AboutThisWeb/开发团队介绍-信息卡片-CSS动画.png');">
+											  <div class="PicToTextCard__content">
+												<p class="PicToTextCard__title">团队信息卡片
+												</p><p class="PicToTextCard__description">团队成员卡片展示效果。每个卡片具有动态旋转角度（通过--r变量控制），并带有模糊背景和渐变色填充。当鼠标悬停在卡片上时，卡片的背景颜色会变淡，卡片正面滑动到背面，同时背面从右侧滑出，实现翻转动画。使用CSS的transform属性和transition来平滑地执行这些变化，提供了吸引人的视觉交互。</p>
+											  </div>
+											</div>
+											
+											
+											<div class="PicToTextCard" style="  background-image: url('./css/img/AboutThisWeb/付款（金额）卡片-信息卡片-CSS动画.png');">
+											  <div class="PicToTextCard__content">
+												<p class="PicToTextCard__title">支付按钮/价格信息
+												</p><p class="PicToTextCard__description">设计精美的支付按钮组件，采用现代响应式设计。组件在悬停时会有放大效果，并且内部的支付卡图标会向上滑动，同时出现美元符号动画。支付在鼠标悬停时放大3%，并且其中的左侧部分宽度会拉伸至整个容器宽。
+								支付卡是一个绿色小卡片，包含两道绿线，模仿信用卡的样式。</p>
+											  </div>
+											</div>
+											
+											<div class="PicToTextCard" style="  background-image: url('./css/img/AboutThisWeb/动态轮播图-JS动画.png');">
+														  <div class="PicToTextCard__content">
+															<p class="PicToTextCard__title">动态轮播图
+															</p><p class="PicToTextCard__description">这段代码实现了一个自定义的轮播图功能，通过JavaScript控制HTML和CSS构建的界面，支持手动切换（通过按钮）和自动播放（每隔3秒）。主要步骤包括监听DOM加载完成、选取关键元素、维护当前显示索引、定义轮播逻辑（`showSlide`函数），并利用`setInterval`实现自动轮换。</p>
+														  </div>
+														</div>
+														
+														
+														
+													<div class="PicToTextCard" style="  background-image: url('./css/img/AboutThisWeb/计算器-JS.png');">
+																	  <div class="PicToTextCard__content">
+																		<p class="PicToTextCard__title">固定输入的计算器
+																		</p><p class="PicToTextCard__description">简易的计算器功能；通过firstOperand、secondOperand和operator变量追踪计算过程中的数值和操作符；appendNumber函数允许用户输入数字，根据当前运算状态决定将其添加到第一个或第二个操作数；appendOperator函数在用户选择运算符时更新operator变量，并清空临时输入状态；calculate函数执行实际的计算，依据所选的运算符进行相应的数学运算，并将结果显示在界面上；backspace函数提供删除最后输入数字的功能，根据运算状态从相应操作数中移除最后一个字符。
+								</p>
+													</div>
+												</div>
+												
+												
+												<div class="PicToTextCard" style="  background-image: url('./css/img/AboutThisWeb/登录页面-JS动画.png');">
+															  <div class="PicToTextCard__content">
+																<p class="PicToTextCard__title">登录注册页面
+																</p><p class="PicToTextCard__description">表单切换动画：
+								利用事件监听器在DOM加载完成后初始化，通过点击事件触发changeForm函数。
+								changeForm函数使页面元素（如开关容器、圆圈、表单容器）添加或移除特定的CSS类，从而实现平滑的动画效果和表单间的切换。<br />
+								表单验证与数据存储：
+								监听两个表单提交事件，对输入进行正则表达式验证，确保邮箱、电话、密码格式正确且所有必填项已填写。验证通过后，使用localStorage存储用户信息（注册表单）或检查是否存在匹配的用户信息（登录表单），并在登录成功后重定向至指定页面。</p>
+															  </div>
+															</div>
+															
+															
+															
+															
+											<div class="PicToTextCard" style="  background-image: url('./css/img/AboutThisWeb/隐私声明-JS动画.png');">
+																						  <div class="PicToTextCard__content">
+																							<p class="PicToTextCard__title">隐私政策/服务条款
+																							</p><p class="PicToTextCard__description">这段代码创建了一个隐私政策弹窗功能，用于网站获取用户对cookies的同意。当页面加载完成时，它会检查是否存在一个名为userAccepted的cookie。如果该cookie不存在或其值不是true，则显示一个弹窗。用户可以通过点击“接受”按钮来同意，此时会设置一个有效期为一年的userAccepted=true的cookie，并关闭弹窗；或者点击“拒绝”或关闭按钮仅关闭弹窗而不设置cookie。这确保了只向未同意的用户展示弹窗，提高用户体验。</p>
+																						  </div>
+																						</div>
+															
+															
+															
+											
+											
+										</section>
+		
+		
+		
+										<section class="Container-ShowSomeCodeCard">
+											
+											<div class="ShowCodeCard">
+											  <div class="ShowCodeCard-header">
+											    <div class="ShowCodeCard-Top">
+											      <div class="ShowCodeCard-Circle">
+											        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+											      </div>
+											      <div class="ShowCodeCard-Circle">
+											        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+											      </div>
+											      <div class="ShowCodeCard-Circle">
+											        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+											      </div>
+											      <div class="ShowCodeCard-title">
+											        <p id="ShowCodeCard-title2">计算器calculate.js</p>
+											      </div>
+											    </div>
+											  </div>
+											  <div class="code-container">
+											    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+											let currentInput = '';
+											        let operator = '';
+											        let firstOperand = '';
+											        let secondOperand = '';
+											
+											        function appendNumber(number) {
+											            if (operator === '') {
+											                firstOperand += number;
+											                currentInput = firstOperand;
+											            } else {
+											                secondOperand += number;
+											                currentInput = secondOperand;
+											            }
+											            document.getElementById('display').value = currentInput;
+											        }
+											
+											        function appendOperator(op) {
+											            if (firstOperand !== '') {
+											                operator = op;
+											                currentInput = '';
+											            }
+											        }
+											
+											        function calculate() {
+											            let result;
+											            const first = parseFloat(firstOperand);
+											            const second = parseFloat(secondOperand);
+											
+											            if (isNaN(first) || isNaN(second)) return;
+											
+											            switch (operator) {
+											                case '+':
+											                    result = first + second;
+											                    break;
+											                case '-':
+											                    result = first - second;
+											                    break;
+											                case '*':
+											                    result = first * second;
+											                    break;
+											                case '/':
+											                    result = first / second;
+											                    break;
+											                default:
+											                    return;
+											            }
+											
+											            document.getElementById('display').value = result;
+											            firstOperand = result.toString();
+											            operator = '';
+											            secondOperand = '';
+											        }
+											
+											        function backspace() {
+											            if (operator === '') {
+											                firstOperand = firstOperand.slice(0, -1);
+											                currentInput = firstOperand;
+											            } else {
+											                secondOperand = secondOperand.slice(0, -1);
+											                currentInput = secondOperand;
+											            }
+											            document.getElementById('display').value = currentInput;
+											        }
+											</textarea>
+											  </div>
+											</div>
+											
+											
+											
+										
+												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">电子时钟效果.js</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												// // 电子时钟功能
+												// function updateClock() {
+												//     const now = new Date();
+												//     const clock = document.getElementById('clock');
+												//     clock.innerText = now.toLocaleTimeString();
+												// }
+												
+												// // 每秒更新一次时钟
+												// setInterval(updateClock, 1000);
+												
+												// // 页面加载时更新一次时钟
+												// updateClock();
+												
+												
+												
+												// 电子时钟功能，包含年月日星期时分秒
+												function updateClock() {
+												    const now = new Date();
+												    const year = now.getFullYear();
+												    const month = now.getMonth() + 1; // 月份从0开始，所以需要+1
+												    const day = now.getDate();
+												    const weekday = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][now.getDay()];
+												    const hour = now.getHours();
+												    const minute = now.getMinutes();
+												    const second = now.getSeconds();
+												
+												    // 格式化时间信息
+												    const clockInfo = `
+												        <div>
+												            <span>${year}年${month}月${day}日</span>
+												            <span>${weekday}</span>
+												        </div>
+												        <div>
+												            <span>${hour}:${minute < 10 ? '0' + minute : minute}:${second < 10 ? '0' + second : second}</span>
+												        </div>
+												    `;
+												    
+												    const clock = document.getElementById('clock');
+												    clock.innerHTML = clockInfo;
+												}
+												
+												// 每秒更新一次时钟
+												setInterval(updateClock, 1000);
+												
+												// 页面加载时立即更新一次
+												updateClock();
+												</textarea>
+												  </div>
+												</div>
+												
+												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">动态轮播图.js</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												document.addEventListener("DOMContentLoaded", function () {
+												    const carousel = document.querySelector('.carousel-inner');
+												    const items = document.querySelectorAll('.carousel-item');
+												    const prevButton = document.querySelector('.carousel-control-prev');
+												    const nextButton = document.querySelector('.carousel-control-next');
+												    let currentIndex = 0;
+												
+												    function showSlide(index) {
+												        if (index >= items.length) {
+												            currentIndex = 0;
+												        } else if (index < 0) {
+												            currentIndex = items.length - 1;
+												        } else {
+												            currentIndex = index;
+												        }
+												        const offset = -currentIndex * 100;
+												        carousel.style.transform = `translateX(${offset}%)`;
+												    }
+												
+												    prevButton.addEventListener('click', () => {
+												        showSlide(currentIndex - 1);
+												    });
+												
+												    nextButton.addEventListener('click', () => {
+												        showSlide(currentIndex + 1);
+												    });
+												
+												    // 自动轮播
+												    setInterval(() => {
+												        showSlide(currentIndex + 1);
+												    }, 3000);
+												});
+												
+												</textarea>
+												  </div>
+												</div>
+												
+												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">电子时钟效果.css</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												// // 电子时钟功能
+												// function updateClock() {
+												//     const now = new Date();
+												//     const clock = document.getElementById('clock');
+												//     clock.innerText = now.toLocaleTimeString();
+												// }
+												
+												// // 每秒更新一次时钟
+												// setInterval(updateClock, 1000);
+												
+												// // 页面加载时更新一次时钟
+												// updateClock();
+												
+												
+												
+												// 电子时钟功能，包含年月日星期时分秒
+												function updateClock() {
+												    const now = new Date();
+												    const year = now.getFullYear();
+												    const month = now.getMonth() + 1; // 月份从0开始，所以需要+1
+												    const day = now.getDate();
+												    const weekday = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][now.getDay()];
+												    const hour = now.getHours();
+												    const minute = now.getMinutes();
+												    const second = now.getSeconds();
+												
+												    // 格式化时间信息
+												    const clockInfo = `
+												        <div>
+												            <span>${year}年${month}月${day}日</span>
+												            <span>${weekday}</span>
+												        </div>
+												        <div>
+												            <span>${hour}:${minute < 10 ? '0' + minute : minute}:${second < 10 ? '0' + second : second}</span>
+												        </div>
+												    `;
+												    
+												    const clock = document.getElementById('clock');
+												    clock.innerHTML = clockInfo;
+												}
+												
+												// 每秒更新一次时钟
+												setInterval(updateClock, 1000);
+												
+												// 页面加载时立即更新一次
+												updateClock();
+												</textarea>
+												  </div>
+												</div>
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">各类协议弹窗.js</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												document.addEventListener("DOMContentLoaded", function () {
+												    const modal = document.getElementById("privacy-modal");
+												    const acceptButton = document.getElementById("accept-button");
+												    const declineButton = document.getElementById("decline-button");
+												    const closeModalButton = document.getElementById("close-modal");
+												
+												    function showModal() {
+												        modal.classList.add("active");
+												    }
+												
+												    function hideModal() {
+												        modal.classList.remove("active");
+												    }
+												
+												    function setCookie(name, value, days) {
+												        const date = new Date();
+												        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+												        const expires = "expires=" + date.toUTCString();
+												        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+												    }
+												
+												    function getCookie(name) {
+												        const cname = name + "=";
+												        const decodedCookie = decodeURIComponent(document.cookie);
+												        const ca = decodedCookie.split(';');
+												        for (let i = 0; i < ca.length; i++) {
+												            let c = ca[i];
+												            while (c.charAt(0) === ' ') {
+												                c = c.substring(1);
+												            }
+												            if (c.indexOf(cname) === 0) {
+												                return c.substring(cname.length, c.length);
+												            }
+												        }
+												        return "";
+												    }
+												
+												    function checkCookie() {
+												        const userAccepted = getCookie("userAccepted");
+												        if (userAccepted !== "true") {
+												            showModal();
+												        }
+												    }
+												
+												    acceptButton.addEventListener("click", function () {
+												        setCookie("userAccepted", "true", 365);
+												        hideModal();
+												    });
+												
+												    declineButton.addEventListener("click", function () {
+												        hideModal();
+												    });
+												
+												    closeModalButton.addEventListener("click", function () {
+												        hideModal();
+												    });
+												
+												    checkCookie();
+												});
+												
+												</textarea>
+												  </div>
+												</div>
+												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">本页图片变文字.css</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												.Container-PicToTextCard {
+													display: flex;
+													justify-content: space-around;
+													flex-wrap: wrap;
+													gap: 20px;
+													margin: 3.125rem 3.125rem;
+												}
+												
+												
+												
+												.PicToTextCard {
+													position: relative;
+													align-items: center;
+												
+													margin-top: 3.125rem;
+													margin-bottom: 3.125rem;
+												  width: 400px;
+												  height: 250px;
+												  /* background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% ); */
+												  background-size: 100%;
+												  background-repeat: no-repeat;
+												  
+												  border-radius: 10px;
+												  overflow: hidden;
+												  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+												}
+												
+												.PicToTextCard svg {
+												  width: 48px;
+												  fill: #333;
+												  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+												}
+												
+												.PicToTextCard:hover {
+												  transform: rotate(-5deg) scale(1.1);
+												  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+												}
+												
+												.PicToTextCard__content {
+												  position: absolute;
+												  top: 50%;
+												  left: 50%;
+												  transform: translate(-50%, -50%) rotate(-45deg);
+												  width: 100%;
+												  height: 100%;
+												  padding: 20px;
+												  box-sizing: border-box;
+												  background-color: #fff;
+												  opacity: 0;
+												  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+												}
+												
+												.PicToTextCard:hover .PicToTextCard__content {
+												  transform: translate(-50%, -50%) rotate(0deg);
+												  opacity: 1;
+												}
+												
+												.PicToTextCard__title {
+												  margin: 0;
+												  font-size: 24px;
+												  color: #333;
+												  font-weight: 700;
+												}
+												
+												.PicToTextCard__description {
+												  margin: 10px 0 0;
+												  font-size: 14px;
+												  color: #777;
+												  line-height: 1.4;
+												}
+												
+												.PicToTextCard:hover svg {
+												  scale: 0;
+												  transform: rotate(-45deg);
+												</textarea>
+												  </div>
+												</div>
+												
+												
+												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">文字闪耀效果.css</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												.shine {
+												  font-size: 2em;
+												  font-weight: 900;
+												  color: rgba(255, 255, 255, 0.3);
+												  background: #222 -webkit-gradient(
+												      linear,
+												      left top,
+												      right top,
+												      from(#222),
+												      to(#222),
+												      color-stop(0.5, #fff)
+												    ) 0 0 no-repeat;
+												  background-image: -webkit-linear-gradient(
+												    -40deg,
+												    transparent 0%,
+												    transparent 40%,
+												    #fff 50%,
+												    transparent 60%,
+												    transparent 100%
+												  );
+												  -webkit-background-clip: text;
+												  -webkit-background-size: 50px;
+												  -webkit-animation: zezzz;
+												  -webkit-animation-duration: 5s;
+												  -webkit-animation-iteration-count: infinite;
+												}
+												@-webkit-keyframes zezzz {
+												  0%,
+												  10% {
+												    background-position: -200px;
+												  }
+												  20% {
+												    background-position: top left;
+												  }
+												  100% {
+												    background-position: 200px;
+												  }
+												}
 
+												</textarea>
+												  </div>
+												</div>
+												
+												
+												
+												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">游戏卡片效果.css</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												/* 新样式组件 */
+												        .buy-game-product-container {
+												            position: relative;
+												            margin: 20px;
+												        }
+												
+												        .buy-game-card {
+												            font-family: Lato, sans-serif;
+												            position: relative;
+												            width: 290px;
+												            height: 400px;
+												            background: #232323;
+												            border-radius: 20px;
+												            overflow: hidden;
+												        }
+												
+												        .buy-game-card:before {
+												            content: '';
+												            position: absolute;
+												            top: 0;
+												            left: 0;
+												            width: 100%;
+												            height: 100%;
+															
+															background-image: url(./logo/nvidia-logo-vert.png);
+															background-blend-mode: color-burn;
+															background-size: 100%;
+															background-repeat: no-repeat;
+															background-color: rgb(118,185,0);
+												            /* background: var(--buy-game-product-color); */
+												            clip-path: circle(150px at 80% 20%);
+												            transition: .5s ease-in-out;
+												        }
+												
+												        .buy-game-card:hover:before {
+												            clip-path: circle(300px at 80% -20%);
+												        }
+												
+												        .buy-game-title {
+												            position: relative;
+												            font-weight: 600;
+												            letter-spacing: 1px;
+												            color: #fff;
+												            margin-top: 12px;
+												        }
+												
+												        .buy-game-bg-title {
+												            font-size: 10em;
+												            font-weight: 900;
+												            font-style: italic;
+												            color: rgba(255,255,255,.04);
+												            position: absolute;
+												            max-width: 120%;
+												            top: -150%;
+												            transition: .6s;
+												        }
+												
+												        .buy-game-card:hover .buy-game-bg-title {
+												            transform: translateY(60%);
+												        }
+												
+												        .buy-game-photo {
+												            position: absolute;
+												            top: 50%;
+												            transform: translateY(-50%);
+												            z-index: 10;
+												            width: 100%;
+												            height: 220px;
+												            transition: .5s;
+												        }
+												
+												        .buy-game-card:hover .buy-game-photo {
+												            top: 0%;
+												            transform: translateY(0%);
+												        }
+												
+												        .buy-game-photo img {
+												            position: absolute;
+												            width: 220px;
+												            top: 50%;
+												            left: 50%;
+												            transform: translate(-50%, -50%) rotate(-25deg);
+												            transition: .5s;
+															/* background-image: url(./logo/Left4Dead2.jpg); */
+												        }
+												
+												        .buy-game-card:hover .buy-game-photo img {
+												            width: 260px;
+												            top: 56%;
+												        }
+												
+												        .buy-game-content {
+												            position: absolute;
+												            bottom: 0;
+												            width: 100%;
+												            height: 100px;
+												            text-align: center;
+												            transition: 1s;
+												            z-index: 5;
+												        }
+												
+												        .buy-game-card:hover .buy-game-content {
+												            height: 190px;
+												        }
+												
+												        .buy-game-feature {
+												            display: flex;
+												            justify-content: center;
+												            align-items: center;
+												            padding: 8px 20px;
+												            transition: .5s;
+												            visibility: hidden;
+												            opacity: 0;
+												        }
+												
+												        .buy-game-card:hover .buy-game-feature {
+												            visibility: visible;
+												            opacity: 1;
+												            transition-delay: .5s;
+												        }
+												
+												        .buy-game-feature div {
+												            color: #fff;
+												            font-weight: 300;
+												            font-size: 14px;
+												            text-transform: uppercase;
+												            letter-spacing: 2px;
+												            margin-right: 10px;
+												        }
+												
+												        .buy-game-feature span {
+												            min-width: 20px;
+												            padding: 0 4px;
+												            height: 26px;
+												            text-align: center;
+												            line-height: 26px;
+												            font-size: 14px;
+												            display: inline-block;
+												            color: #111;
+												            background: #fff;
+												            margin: 0 5px;
+												            transition: .4s;
+												            border-radius: 4px;
+												            cursor: pointer;
+												        }
+												
+												        .buy-game-feature span:hover {
+												            color: #000;
+												            background: var(--buy-game-product-color);
+												        }
+												
+												        .buy-game-btn-buy {
+												            display: inline-block;
+												            padding: 10px 20px;
+												            background: #fff;
+												            border: none;
+												            border-radius: 4px;
+												            margin-top: 10px;
+												            text-decoration: none;
+												            font-weight: 600;
+												            color: #111;
+												            opacity: 0;
+												            transform: translateY(50px);
+												            transition: 0.5s;
+												            cursor: pointer;
+												            outline: none;
+												        }
+												
+												        .buy-game-card:hover .buy-game-btn-buy {
+												            opacity: 1;
+												            transform: translateY(0px);
+												            transition: 0.5s;
+												            transition-delay: 0.5s;
+												        }
+												
+												        .buy-game-card:hover .buy-game-btn-buy:hover {
+												            background: var(--buy-game-product-color);
+												            transition-delay: 0;
+												            transition: 0.05s;
+												        }
+												
+												        .buy-game-product-1 {
+												            --buy-game-product-color: #EB6CA4;
+												        }
+												
+												        .buy-game-size span {
+												            cursor: pointer;
+												            z-index: 50;
+												        }
+												
+												        .buy-game-feature .buy-game-tt:hover {
+												            background: #038dff;
+												        }
+												
+												        .buy-game-feature .buy-game-ttt:hover {
+												            background: #09ff0d;
+												        }
+												</textarea>
+												  </div>
+												</div>
+												
+												
+												
+												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">计算器效果.css</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												body {
+												            font-family: Arial, sans-serif;
+															
+															
+															background-image: url(./img/BGimg-horizon4-carseaAudi.png);
+												
+												
+												            margin: 0;
+												            padding: 0;
+												            display: flex;
+												            flex-direction: column;
+												            min-height: 100vh;
+												        }
+												        nav {
+												            background-color: #333;
+												            color: white;
+												            padding: 10px 0;
+												            text-align: center;
+												        }
+												        nav a {
+												            color: white;
+												            margin: 0 15px;
+												            text-decoration: none;
+												            font-size: 18px;
+												        }
+												        nav a:hover {
+												            text-decoration: underline;
+												        }
+												        footer {
+												            background-color: #333;
+												            color: white;
+												            text-align: center;
+												            padding: 10px 0;
+												            margin-top: auto;
+												        }
+												        #cal-body {
+												            width: 400px;
+												            border-radius: 20px;
+															
+												            backdrop-filter: blur(10px);
+												            transform: rotate(calc(var(--r) * 1deg));
+												            border-radius: 30px;
+												            background: linear-gradient(#dde1e7, transparent);
+															
+												            box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+												            padding: 45px;
+												            margin: 40px auto;
+												        }
+												        .input input {
+												            height: 50px;
+												            width: 100%;
+															
+												            border-radius: 10px;
+												            backdrop-filter: blur(10px);
+												            transform: rotate(calc(var(--r) * 1deg));
+												            border-radius: 30px;
+												            background: linear-gradient(#dde1e7, transparent);
+															
+												            box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+												            border: 0;
+												            color: rgb(116, 116, 116);
+												            font-size: 1.5rem;
+												            padding: 0 30px;
+												            box-sizing: border-box;
+												        }
+												        .input input:focus {
+												            outline: none;
+															
+												            border-radius: 10px;
+												            backdrop-filter: blur(10px);
+												            transform: rotate(calc(var(--r) * 1deg));
+												            border-radius: 30px;
+												            background: linear-gradient(#dde1e7, transparent);
+															
+												            box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+												        }
+												        .buttons button {
+												            cursor: pointer;
+												            height: 60px;
+												            width: 60px;
+												            border: 0;
+												            font-size: 1.5rem;
+												            border-radius: 50px;
+												            
+															border-radius: 10px;
+															backdrop-filter: blur(10px);
+															transform: rotate(calc(var(--r) * 1deg));
+															border-radius: 30px;
+															background: linear-gradient(#dde1e7, transparent);
+															
+												            box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+												            color: rgb(137, 137, 137);
+												            margin: 5px;
+												        }
+												        .buttons button:focus {
+												            
+															border-radius: 10px;
+															backdrop-filter: blur(10px);
+															transform: rotate(calc(var(--r) * 1deg));
+															border-radius: 30px;
+															background: linear-gradient(#dde1e7, transparent);
+															
+												            box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px -5px 9px rgba(94,104,121,0.3);
+												        }
+												        .buttons {
+												            padding-top: 30px;
+												            display: flex;
+												            justify-content: space-between;
+												            flex-wrap: wrap;
+												        }
+												        .buttons div {
+												            display: flex;
+												            flex-wrap: wrap;
+												            justify-content: space-between;
+												            width: 100%;
+												        }
+												        .buttons div button {
+												            margin: 5px;
+												        }
+												        .buttons div.full-width {
+												            justify-content: center;
+												        }
+														
+												
+												</textarea>
+												  </div>
+												</div>
+												
+												
+												
+												
+												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">金标卡片效果.css</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												body {
+												            margin: 0;
+												            padding: 0;
+												            font-family: Arial, sans-serif;
+												            background-color: #333;
+												            color: #fff;
+												            display: flex;
+												            flex-direction: column;
+												            align-items: center;
+												            justify-content: center;
+												            min-height: 100vh;
+															background-image: url(./img/BGimg-horizon4-carforestGold.png);
+												        }
+												
+												        .container {
+												            display: flex;
+												            flex-wrap: wrap;
+												            justify-content: center;
+												            gap: 20px;
+												            padding: 20px;
+												        }
+												
+												        .card_box {
+												            width: 200px;
+												            height: 250px;
+												            border-radius: 20px;
+												            background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+												            position: relative;
+												            box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+												            cursor: pointer;
+												            transition: all .3s;
+												        }
+												
+												        .card_box:hover {
+												            transform: scale(0.9);
+												        }
+												
+												        .card_box span {
+												            position: absolute;
+												            overflow: hidden;
+												            width: 150px;
+												            height: 150px;
+												            top: -10px;
+												            left: -10px;
+												            display: flex;
+												            align-items: center;
+												            justify-content: center;
+												        }
+												
+												        .card_box span::before {
+												            content: '强烈推荐的游戏';
+												            position: absolute;
+												            width: 150%;
+												            height: 40px;
+												            background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+												            transform: rotate(-45deg) translateY(-20px);
+												            display: flex;
+												            align-items: center;
+												            justify-content: center;
+												            color: #fff;
+												            font-weight: 600;
+												            letter-spacing: 0.1em;
+												            text-transform: uppercase;
+												            box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+												        }
+												
+												        .card_box span::after {
+												            content: '';
+												            position: absolute;
+												            width: 10px;
+												            bottom: 0;
+												            left: 0;
+												            height: 10px;
+												            z-index: -1;
+												            box-shadow: 140px -140px #cc3f47;
+												            background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+												        }
+												
+												        .card_box img {
+												            width: 100%;
+												            height: 100%;
+												            border-radius: 20px;
+												            object-fit: cover;
+												        }
+												</textarea>
+												  </div>
+												</div>
+												
+												
+												
+												
+												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">导航栏按钮.css</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												/* 导航栏样式 */
+												.navbar {
+												    display: flex;
+												    justify-content: space-around;
+												    align-items: center;
+												    background-color: #333;
+												    padding: 1em;
+												}
+												
+												/* Minecraft按钮样式 */
+												.NavbarButton {
+												    cursor: pointer;
+												    width: fit-content;
+												    height: fit-content;
+												    padding: 15px;
+												    background-color: rgb(223, 223, 223);
+												    border-left: 3px solid white;
+												    border-top: 3px solid white;
+												    border-right: 3px solid gray;
+												    border-bottom: 3px solid gray;
+												    font-family: "Courier New", Courier, monospace;
+												    font-size: 1.1rem;
+												    font-weight: 900;
+												    outline: 2px solid black;
+												    text-decoration: none; /* 移除默认的链接下划线 */
+												    color: black; /* 设置文字颜色 */
+												    text-align: center; /* 居中对齐 */
+												}
+												
+												.NavbarButton:hover {
+												    background-color: rgb(0, 197, 0);
+												    color: white;
+												    outline-color: white;
+												    border-left: 3px solid rgb(0, 255, 0);
+												    border-top: 3px solid rgb(0, 255, 0);
+												    border-right: 3px solid green;
+												    border-bottom: 3px solid green;
+												}
+												
+												.NavbarButton:active {
+												    border-left: 3px solid green;
+												    border-top: 3px solid green;
+												    border-right: 3px solid rgb(0, 255, 0);
+												    border-bottom: 3px solid rgb(0, 255, 0);
+												}
+												
+												
+												
+												
+												/* 页脚样式 */
+												.footer {
+												    text-align: center;
+												    padding: 20px;
+												    background-color: #333;
+												    color: white;
+												}
+												
+												</textarea>
+												  </div>
+												</div>
+												
+												
+												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">废弃的音乐卡片.css</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												.music-player-on-the-top-modal {
+												  display: flex;
+												  position: fixed;
+												  z-index: 1000;
+												  left: 50%;
+												  top: 50%;
+												  transform: translate(-50%, -50%);
+												  width: 80%;
+												  max-width: 600px;
+												  background: white;
+												  border-radius: 10px;
+												  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+												  overflow-y: auto;
+												  cursor: grab;
+												}
+												
+												.music-player-on-the-top-modal-content {
+												  padding: 20px;
+												  width: 100%;
+												}
+												
+												.music-player-on-the-top-close-button {
+												  color: #aaa;
+												  float: right;
+												  font-size: 28px;
+												  font-weight: bold;
+												}
+												
+												.music-player-on-the-top-close-button:hover,
+												.music-player-on-the-top-close-button:focus {
+												  color: black;
+												  text-decoration: none;
+												  cursor: pointer;
+												}
+												
+												.music-player-on-the-top-hidden {
+												  display: none;
+												}
+												
+												.music-player-on-the-top-main {
+												  background-color: white;
+												  padding: 1em;
+												  padding-bottom: 1.1em;
+												  border-radius: 15px;
+												  margin: 1em;
+												}
+												
+												.music-player-on-the-top-loader {
+												  display: flex;
+												  flex-direction: row;
+												  height: 4em;
+												  padding-left: 1em;
+												  padding-right: 1em;
+												  justify-content: right;
+												  border-radius: 10px;
+												  transition: .4s ease-in-out;
+												}
+												
+												.music-player-on-the-top-loader:hover {
+												  cursor: pointer;
+												  background-color: lightgray;
+												}
+												
+												.music-player-on-the-top-currentplaying {
+												  display: flex;
+												  margin: 1em;
+												}
+												
+												.music-player-on-the-top-heading {
+												  color: black;
+												  font-size: 1.1em;
+												  font-weight: bold;
+												  align-self: center;
+												}
+												
+												.music-player-on-the-top-loading {
+												  display: none;
+												  margin-top: 1em;
+												  margin-left: 0.3em;
+												}
+												
+												.music-player-on-the-top-load {
+												  width: 2px;
+												  height: 33px;
+												  background-color: limegreen;
+												  animation: 1s move6 infinite;
+												  border-radius: 5px;
+												  margin: 0.1em;
+												}
+												
+												.music-player-on-the-top-load:nth-child(1) {
+												  animation-delay: 0.2s;
+												}
+												
+												.music-player-on-the-top-load:nth-child(2) {
+												  animation-delay: 0.4s;
+												}
+												
+												.music-player-on-the-top-load:nth-child(3) {
+												  animation-delay: 0.6s;
+												}
+												
+												.music-player-on-the-top-play {
+												  position: relative;
+												  left: 0.35em;
+												  height: 1.6em;
+												  width: 1.6em;
+												  clip-path: polygon(50% 50%, 100% 50%, 75% 6.6%);
+												  background-color: black;
+												  transform: rotate(-90deg);
+												  align-self: center;
+												  margin-top: 0.7em;
+												  justify-self: center;
+												}
+												
+												.music-player-on-the-top-albumcover {
+												  position: relative;
+												  margin-right: 1em;
+												  height: 40px;
+												  width: 40px;
+												  background-color: rgb(233, 232, 232);
+												  align-self: center;
+												  border-radius: 5px;
+												}
+												
+												.music-player-on-the-top-song {
+												  position: relative;
+												  margin-right: 1em;
+												  color: black;
+												  align-self: center;
+												}
+												
+												.music-player-on-the-top-artist {
+												  font-size: 0.6em;
+												}
+												
+												@keyframes move6 {
+												  0% {
+												    height: 0.2em;
+												  }
+												
+												  25% {
+												    height: 0.7em;
+												  }
+												
+												  50% {
+												    height: 1.5em;
+												  }
+												
+												  100% {
+												    height: 0.2em;
+												  }
+												}
+												
+												.music-player-on-the-top-loader.playing .music-player-on-the-top-loading {
+												  display: flex;
+												}
+
+												</textarea>
+												  </div>
+												</div>
+												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">导航栏按钮.css</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												/* 导航栏样式 */
+												.navbar {
+												    display: flex;
+												    justify-content: space-around;
+												    align-items: center;
+												    background-color: #333;
+												    padding: 1em;
+												}
+												
+												/* Minecraft按钮样式 */
+												.NavbarButton {
+												    cursor: pointer;
+												    width: fit-content;
+												    height: fit-content;
+												    padding: 15px;
+												    background-color: rgb(223, 223, 223);
+												    border-left: 3px solid white;
+												    border-top: 3px solid white;
+												    border-right: 3px solid gray;
+												    border-bottom: 3px solid gray;
+												    font-family: "Courier New", Courier, monospace;
+												    font-size: 1.1rem;
+												    font-weight: 900;
+												    outline: 2px solid black;
+												    text-decoration: none; /* 移除默认的链接下划线 */
+												    color: black; /* 设置文字颜色 */
+												    text-align: center; /* 居中对齐 */
+												}
+												
+												.NavbarButton:hover {
+												    background-color: rgb(0, 197, 0);
+												    color: white;
+												    outline-color: white;
+												    border-left: 3px solid rgb(0, 255, 0);
+												    border-top: 3px solid rgb(0, 255, 0);
+												    border-right: 3px solid green;
+												    border-bottom: 3px solid green;
+												}
+												
+												.NavbarButton:active {
+												    border-left: 3px solid green;
+												    border-top: 3px solid green;
+												    border-right: 3px solid rgb(0, 255, 0);
+												    border-bottom: 3px solid rgb(0, 255, 0);
+												}
+												
+												
+												
+												
+												/* 页脚样式 */
+												.footer {
+												    text-align: center;
+												    padding: 20px;
+												    background-color: #333;
+												    color: white;
+												}
+												
+												</textarea>
+												  </div>
+												</div>
+<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">协议同意弹窗.css</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												/* Existing styles */
+												
+												/* 隐私政策/服务条款弹窗样式 */
+												.Privacy_Terms-container {
+												  max-height: 400px;
+												  max-width: 500px;
+												  margin-left: auto;
+												  margin-right: auto;
+												  background-color: #fff;
+												  border-radius: 16px;
+												  overflow: hidden;
+												  display: flex;
+												  flex-direction: column;
+												  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25);
+												}
+												
+												@media (max-width: 600px) {
+												  .Privacy_Terms-container {
+												    width: 90%;
+												  }
+												}
+												
+												.Privacy_Terms-container-header {
+												  padding: 16px 32px;
+												  border-bottom: 1px solid #ddd;
+												  display: flex;
+												  align-items: center;
+												  justify-content: space-between;
+												}
+												
+												.Privacy_Terms-container-title {
+												  display: flex;
+												  align-items: center;
+												  gap: 8px;
+												  line-height: 1;
+												  font-weight: 700;
+												  font-size: 1.125rem;
+												}
+												
+												.Privacy_Terms-container-title svg {
+												  width: 32px;
+												  height: 32px;
+												  color: #750550;
+												}
+												
+												.Privacy_Terms-container-body {
+												  padding: 24px 32px 51px;
+												  overflow-y: auto;
+												}
+												
+												.rtf h1,
+												.rtf h2,
+												.rtf h3,
+												.rtf h4,
+												.rtf h5,
+												.rtf h6 {
+												  font-weight: 700;
+												}
+												
+												.rtf h1 {
+												  font-size: 1.5rem;
+												  line-height: 1.125;
+												}
+												
+												.rtf h2 {
+												  font-size: 1.25rem;
+												  line-height: 1.25;
+												}
+												
+												.rtf h3 {
+												  font-size: 1rem;
+												  line-height: 1.5;
+												}
+												
+												.rtf > * + * {
+												  margin-top: 1em;
+												}
+												
+												.rtf > * + :is(h1, h2, h3) {
+												  margin-top: 2em;
+												}
+												
+												.rtf > :is(h1, h2, h3) + * {
+												  margin-top: 0.75em;
+												}
+												
+												.rtf ul,
+												.rtf ol {
+												  margin-left: 20px;
+												  list-style-position: inside;
+												}
+												
+												.rtf ol {
+												  list-style: numeric;
+												}
+												
+												.rtf ul {
+												  list-style: disc;
+												}
+												
+												.Privacy_Terms-container-footer {
+												  padding: 20px 32px;
+												  display: flex;
+												  align-items: center;
+												  justify-content: flex-end;
+												  border-top: 1px solid #ddd;
+												  gap: 12px;
+												  position: relative;
+												}
+												
+												.Privacy_Terms-container-footer:after {
+												  content: "";
+												  display: block;
+												  position: absolute;
+												  top: -51px;
+												  left: 24px;
+												  right: 24px;
+												  height: 50px;
+												  flex-shrink: 0;
+												  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.75), transparent);
+												  pointer-events: none;
+												}
+												
+												.button {
+												  padding: 12px 20px;
+												  border-radius: 8px;
+												  background-color: transparent;
+												  border: 0;
+												  font-weight: 600;
+												  cursor: pointer;
+												  transition: 0.15s ease;
+												}
+												
+												.button.is-ghost:hover, .button.is-ghost:focus {
+												  background-color: #dfdad7;
+												}
+												
+												.button.is-primary {
+												  background-color: #750550;
+												  color: #fff;
+												}
+												
+												.button.is-primary:hover, .button.is-primary:focus {
+												  background-color: #4a0433;
+												}
+												
+												.icon-button {
+												  padding: 0;
+												  border: 0;
+												  background-color: transparent;
+												  width: 40px;
+												  height: 40px;
+												  display: flex;
+												  align-items: center;
+												  justify-content: center;
+												  line-height: 1;
+												  cursor: pointer;
+												  border-radius: 8px;
+												  transition: 0.15s ease;
+												}
+												
+												.icon-button svg {
+												  width: 24px;
+												  height: 24px;
+												}
+												
+												.icon-button:hover, .icon-button:focus {
+												  background-color: #dfdad7;
+												}
+												
+												.Privacy_Terms {
+												  display: none; /* 默认隐藏 */
+												  position: fixed;
+												  top: 0;
+												  left: 0;
+												  width: 100%;
+												  height: 100%;
+												  background: rgba(0, 0, 0, 0.5);
+												  align-items: center;
+												  justify-content: center;
+												  z-index: 1000;
+												}
+												
+												.Privacy_Terms.active {
+												  display: flex;
+												}
+												
+												
+												</textarea>
+												  </div>
+												</div>												
+												<div class="ShowCodeCard">
+												  <div class="ShowCodeCard-header">
+												    <div class="ShowCodeCard-Top">
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-red ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-yellow ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-Circle">
+												        <span class="ShowCodeCard-green ShowCodeCard-Circle2"></span>
+												      </div>
+												      <div class="ShowCodeCard-title">
+												        <p id="ShowCodeCard-title2">三级页面样式组.css</p>
+												      </div>
+												    </div>
+												  </div>
+												  <div class="code-container">
+												    <textarea class="area" id="ShowCodeCard-code" name="ShowCodeCard-code" readonly="">
+												
+												
+												body{
+													background-image: url("./img/Forza Horizon 4-wallpaper-fxp.jpg");
+													background-repeat: no-repeat;
+													background-size: 120%;
+												}
+												
+												/* 头部样式 */
+												.header {
+												    color: white;
+													margin-top: 3.125rem;
+													margin-bottom: 3.125rem;	
+													width: 75%;
+												    text-align: center;
+												    padding: 20px;
+													backdrop-filter: blur(10px);
+													transform: rotate(calc(var(--r) * 1deg));
+													border-radius: 30px;
+													background: linear-gradient(#ea2e82, transparent);
+													
+													margin-left: auto;
+													margin-right: auto;
+													
+													/* align-items: center;
+													justify-content: center;
+													position: static; */
+												}
+												
+												
+												.footer {
+													width: 100%;
+													margin-top: auto;
+												}
+												
+												.home {
+												    height: 100%;
+												    overflow: hidden;
+												}
+												
+												.content {
+												    perspective: 340px;
+												    width: 100%;
+												    position: relative;
+												}
+												
+												h1 {
+												    color: white;
+												    text-align: center;
+												}
+												
+												span {
+												    display: block;
+												    text-align: center;
+												}
+												
+												/* 星星（粒子效果） */
+												
+												.stars {
+												    position: absolute;
+												    top: 50%;
+												    left: 50%;
+												    width: 2px;
+												    height: 2px;
+												    z-index: 999;
+												    border-radius: 50%;
+													/*  */
+												    box-shadow: -447px 387px #c4c4c4, -401px 118px #fafafa, -109px 217px #d9d9d9, -680px -436px #e3e3e3, 514px 360px #cccccc, -708px 298px #e8e8e8, -696px -270px #ededed, 116px -128px #f7f7f7, 179px 35px white, -404px -90px whitesmoke, -331px -309px #c4c4c4, -363px -24px #d1d1d1, 277px 416px #fafafa, -145px -244px whitesmoke, 123px 62px #d4d4d4, -407px 418px #d9d9d9, 535px 237px #d9d9d9, -466px -78px #f7f7f7, 257px 287px #dedede, 327px -398px #e0e0e0, -602px -38px #c2c2c2, 128px 398px #e6e6e6, 274px -446px #d1d1d1, -602px -298px #c7c7c7, 526px -5px #c4c4c4, -90px -158px #fcfcfc, 5px 294px whitesmoke, -633px 229px #c4c4c4, -475px 427px #dedede, 586px -453px #f2f2f2, 180px -432px #c7c7c7, -637px -88px #cfcfcf, -453px 308px #d6d6d6, -111px 1px #d9d9d9, 573px -450px #ededed, 198px 300px #d6d6d6, -355px 166px #dedede, -715px 13px #e3e3e3, 262px -104px #d1d1d1, 147px 325px #dbdbdb, 1px 399px #dbdbdb, 286px -100px white, 43px -329px #e8e8e8, 617px 55px #d9d9d9, -168px -392px #cccccc, 84px 219px #c9c9c9, 507px -226px #d9d9d9, -327px -70px #e6e6e6, 386px -212px #c4c4c4, -717px 4px #cfcfcf, 502px -231px #e3e3e3, 302px 56px #ededed, 649px 341px #c7c7c7, 569px 350px #c9c9c9, 516px -31px #e6e6e6, 689px 447px #c2c2c2, 591px -206px #fafafa, 422px -137px #e6e6e6, -510px -324px #cccccc, -649px 287px #c2c2c2, -194px -48px #f7f7f7, -279px -329px #d1d1d1, -406px 478px #dbdbdb, -735px -87px #c9c9c9, 30px -197px #dedede, -564px 233px #e6e6e6, -486px -324px #ededed, -54px -7px #ededed, -441px -194px #e3e3e3, -133px -95px #e0e0e0, -722px -73px #d6d6d6, 595px 423px #ededed, 568px -39px #ededed, 370px 377px #d1d1d1, -419px -102px #fcfcfc, -450px 109px #c4c4c4, -57px -119px #d1d1d1, -582px 150px #e6e6e6, 206px -263px #cfcfcf, 582px -461px #c9c9c9, -268px -141px #d9d9d9, -148px 291px #c7c7c7, 254px -179px #c9c9c9, 725px 424px #f0f0f0, 391px -150px #ebebeb, 89px -299px #d4d4d4, 170px 1px #c9c9c9, 243px 209px #c7c7c7, 27px 460px #c9c9c9, -465px -380px #d4d4d4, 530px -360px whitesmoke, -626px 53px #e0e0e0, 706px 218px #d9d9d9, 40px -82px #cccccc, -5px -212px #e6e6e6, -742px 33px #ebebeb, -714px 478px #e0e0e0, -585px -125px #cccccc, -216px 348px #cfcfcf, 601px 332px #ededed, 344px -88px #c4c4c4, 659px -22px #d1d1d1, -411px 188px #d6d6d6, -423px -206px #fcfcfc, -359px -136px #cfcfcf, 612px 406px whitesmoke, 725px 96px whitesmoke, 363px -446px white, -204px 325px #c9c9c9, 740px 176px #fafafa, -489px -352px white, -638px 64px #dbdbdb, 537px -65px #dbdbdb, 151px -32px #ebebeb, 681px 212px #fcfcfc, 604px -149px #e6e6e6, -542px -398px #c4c4c4, -707px 66px whitesmoke, -381px 258px #cfcfcf, -30px 332px #d6d6d6, 512px -381px #c9c9c9, 195px 288px #cccccc, -278px 479px #c7c7c7, 27px -208px #d6d6d6, -288px 15px white, -680px 248px #dedede, 433px 31px #c9c9c9, 150px -206px #d4d4d4, -79px 247px white, -594px 115px #e0e0e0, 99px 292px #e0e0e0, 673px -269px #dedede, -257px -64px #d1d1d1, 449px 81px #f2f2f2, 18px -99px #d1d1d1, -694px 415px #f7f7f7, 240px 264px #e0e0e0, 450px -172px white, 383px 7px #e8e8e8, 338px -73px #c9c9c9, 291px -19px #ebebeb, 659px 137px #d1d1d1, 602px -6px #fcfcfc, 554px 249px #ebebeb, 625px 356px #d9d9d9, 579px -183px #d6d6d6, -20px 250px white, -401px 431px #c4c4c4, -645px -232px #cccccc, -265px -148px white, 553px 258px #d1d1d1, 166px -360px #ebebeb, 719px 51px #ededed, 612px -129px #ebebeb, -465px -104px #f2f2f2, -154px -121px #d9d9d9, -1px 330px #f2f2f2, -666px 248px #f7f7f7, -720px 264px #ededed, 148px -365px #e6e6e6, -388px -349px #c4c4c4, 128px -88px #e3e3e3, -683px -274px #fafafa, -341px 41px #c9c9c9, -59px -471px #f0f0f0, -3px -427px #c2c2c2, 418px 167px #d6d6d6, 343px 247px #c7c7c7, 623px -347px #d1d1d1, 716px -217px white, 243px -409px whitesmoke, -75px -126px #d6d6d6, -730px -91px #c9c9c9, -210px -397px #cfcfcf, -349px 180px #c9c9c9, -567px -281px #e0e0e0, -460px 381px #fcfcfc, -310px -22px #ededed, 450px -1px #dbdbdb, -405px -328px #e3e3e3, 5px 332px #d6d6d6, -294px 302px #fcfcfc, -398px 97px whitesmoke, -696px 325px #cfcfcf, -589px 110px #d6d6d6, 353px -411px #dbdbdb, -697px -318px #ebebeb, -114px -72px #f0f0f0, 259px -193px #fcfcfc, 60px 26px #e6e6e6, -63px -232px white, 205px -372px #f7f7f7, -464px -333px #f2f2f2, -374px 123px white, -377px -386px #c7c7c7, -80px 337px #cccccc, 478px -178px #dbdbdb, 222px 420px #ebebeb, -707px 99px #c4c4c4, 716px -132px #fafafa, -253px -286px #e3e3e3, 646px 178px #f0f0f0, 201px 24px #d1d1d1, 178px -58px #c7c7c7, -557px 368px #ededed, 0px 219px #d9d9d9, -266px -269px #cccccc, 242px -197px #c9c9c9, -419px 193px #c2c2c2, -47px 91px #c7c7c7, -109px 75px #c2c2c2, -146px -453px #d6d6d6, 671px -350px #f2f2f2, 421px -91px #d9d9d9, 738px 19px #ededed, -316px -155px #dedede, 419px 244px #fcfcfc, -278px -418px #d6d6d6, -581px -181px #fcfcfc, 139px 264px #d9d9d9, 691px -11px #ebebeb, -622px 402px #c2c2c2, 219px 396px #f0f0f0, -149px -423px white, -716px -78px #d9d9d9, -590px 341px #e6e6e6, -208px 79px #d6d6d6, -227px -24px #f7f7f7, 239px 262px #d1d1d1, 740px 443px #f7f7f7, 509px 134px #d6d6d6, -555px 232px #e8e8e8, -67px -427px #cfcfcf, -368px 250px #f7f7f7, 715px -415px #fafafa, 411px -301px #f0f0f0, -322px 287px #d9d9d9, -429px -90px #f2f2f2, -327px -387px #f0f0f0, -491px 183px #c2c2c2, -133px 250px #d4d4d4, 538px 139px #e3e3e3, -417px -125px #f0f0f0, 653px -351px #e6e6e6, -549px 38px #d4d4d4, 602px 110px whitesmoke, 415px 105px #e0e0e0, -733px -371px #cfcfcf, 286px 403px #d4d4d4, 11px 320px #c4c4c4, -597px 158px whitesmoke, 716px -350px whitesmoke, 321px 67px #fafafa, -237px -300px #cfcfcf, 74px 152px #c9c9c9, 587px -123px #fcfcfc, 699px -332px whitesmoke, 399px 355px #f7f7f7, -323px 314px #dbdbdb, 89px 416px #c7c7c7, 445px 38px #e3e3e3, 572px 122px #c4c4c4, -258px 372px white, 49px 306px #d9d9d9, 437px -35px #dedede, 566px 174px #f2f2f2, 732px -299px whitesmoke, -410px 394px #ededed, 131px -415px white, 19px -326px #e8e8e8, -700px -188px #d1d1d1, 96px -1px #e0e0e0, -328px -396px #f0f0f0, -117px -214px #fcfcfc, -53px 261px #ebebeb, 80px 134px #d6d6d6, -364px -216px white, -636px -125px #dbdbdb, -639px -265px #e3e3e3, 208px 98px #c7c7c7, 172px 467px #e0e0e0, 435px 309px #e3e3e3, 194px -259px #f0f0f0, 209px -186px #c9c9c9, -312px 418px #fafafa, 229px 407px #c9c9c9, -449px -357px #fafafa, 674px 121px #e8e8e8, 608px -429px #ebebeb, -431px -428px #cfcfcf, 105px 462px #e3e3e3, -179px -372px #e3e3e3, 143px -317px #d6d6d6, -449px -149px #fafafa, -544px 250px #dedede, -220px -323px whitesmoke, 658px 8px whitesmoke, -656px -244px #e8e8e8, 347px 11px whitesmoke, 694px -230px #f7f7f7, -317px 1px #c4c4c4, 28px 23px #fcfcfc, -382px 321px #dbdbdb, 632px -74px #c4c4c4, 154px -245px #c2c2c2, -553px 337px #d6d6d6, -48px -243px #d1d1d1, 92px -391px #cccccc, -71px -256px #cfcfcf, -372px 57px #d9d9d9, 369px -140px #fcfcfc, 675px 81px #c2c2c2, -663px 254px #cccccc, 703px -203px #ededed, 74px -363px #c2c2c2, 643px -458px #d1d1d1, 198px 359px #cccccc, 265px 309px #d4d4d4, -353px -368px #e8e8e8, -465px 439px whitesmoke, 693px 360px #c9c9c9, 634px -397px #d1d1d1, 467px 25px whitesmoke, -558px -272px #e6e6e6, 671px 69px #dbdbdb, 407px 357px #cfcfcf, 379px 80px white, 10px -203px #c9c9c9, 104px -292px #f0f0f0, -667px -29px #d1d1d1, 557px -155px #e6e6e6, -505px 115px #cfcfcf, -605px 164px #f2f2f2, -108px -223px #e0e0e0, 523px -156px #ebebeb, 691px 230px white, -507px -13px #d1d1d1, -349px 332px #dedede, 520px 266px whitesmoke, -66px -250px #e6e6e6, -496px -449px #ebebeb, 414px -170px #dedede, -649px 230px #ebebeb, 598px -92px #c7c7c7, -638px 113px #c2c2c2, 151px 363px #f7f7f7, -445px -241px #f0f0f0, 527px -14px #dedede, 203px -61px #cfcfcf, -716px -284px #ebebeb, -525px 134px #c2c2c2;
+												    animation: fly 15s linear infinite;
+													/* 定义一个名为fly的动画 */
+												    transform-style: preserve-3d;
+													/* 位置变化样式 */
+												}
+												
+												.stars:before,
+												.stars:after {
+												    content: "";
+												    position: absolute;
+												    width: inherit;
+												    height: inherit;
+												    box-shadow: inherit;
+												}
+												
+												.stars:before {
+												    transform: translateZ(-300px);
+												    opacity: .6;
+												}
+												
+												.stars:after {
+												    transform: translateZ(-600px);
+												    opacity: .4;
+												}
+												
+												@keyframes fly {
+												    from {
+												        transform: translateZ(0px);
+												        opacity: .6;
+												    }
+												    to {
+												        transform: translateZ(200px);
+												        opacity: .8;
+												    }
+												}
+												
+												.title {
+													position: absolute;
+													color:white;
+													top: 280px;
+													left: 0;
+													right: 0;
+													font-size: 28px;
+													font-weight: 550;
+													bottom: 0;
+													width: 800px;
+													margin: auto;
+													text-align: center;
+												}
+												#delete{
+													/* 此为被搁置的代码，后续可能会被启用，目前遇到bug暂时搁置 */
+												    position: absolute;
+												    display: flex;
+												    justify-content: center;
+												    left: 0;
+												    right: 0;
+												    top: 3px;
+												    margin: auto;
+													padding-top: 10px;
+												    bottom: 0;
+												    color: #fff;
+												    font-size: 24px;
+												    font-weight: 500;
+													backdrop-filter: blur(50px);
+													background-color: rgba(227, 203, 255, 0.4);
+													box-shadow: 0 5px 15px rgba(20, 20, 20, 0.8);
+													height: 50px;
+													width: 500px;
+													border-radius: 0.625rem;
+												}
+												
+												.titles {
+												    position: absolute;
+												    display: flex;
+												    justify-content: center;
+												    left: 0;
+												    right: 0;
+												    top: 350px;
+												    margin: auto;
+												    bottom: 0;
+												    color: #fff;
+												    font-size: 20px;
+												    font-weight: 500;
+													backdrop-filter: blur(50px);
+													background-color: rgba(249, 222, 255, 0.4);
+													box-shadow: 0 5px 15px rgba(20, 20, 20, 0.8);
+													height: 50px;
+													width: 600px;
+													border-radius: 0.625rem;
+													padding-top: 10px;
+												}
+												
+												.icon {
+												    width: 15px;
+												    height: 15px;
+												    padding: 5px;
+												    border: 2px solid #fff;
+												    border-radius: 100%;
+												    position: absolute;
+												    bottom: 50px;
+												    animation: downs 2s linear infinite;
+												}
+												
+												/* 控制logo动画,从0px运动到30px并伴随着透明度渐变 */
+												@keyframes downs {
+												    from {
+												        transform: translatey(0px);
+												        opacity: .6;
+												    }
+												    to {
+												        transform: translatey(30px);
+												        opacity: .8;
+												    }
+												}
+												
+												.ribbon {
+												    display: flex;
+												    justify-content: center;
+												    position: absolute;
+												    right: 300px;
+												    top: 50px;
+												    margin: auto;
+												}
+												
+												.ribbon:after,
+												.ribbon:before {
+												    margin-top: 0.5em;
+												    content: "";
+												    display: flex;
+												    ;
+												    border: 1.5em solid #fff;
+												}
+												
+												.ribbon:after {
+												    border-right-color: transparent;
+												}
+												
+												.ribbon:before {
+												    border-left-color: transparent;
+												}
+												
+												.ribbon a:link,
+												.ribbon a:visited {
+												    color: #000;
+												    text-decoration: none;
+												    height: 3.5em;
+												    overflow: hidden;
+												}
+												
+												.ribbon span {
+												    background: #fff;
+												    display: inline-block;
+												    line-height: 3em;
+												    padding: 0 1.5em;
+												    margin-top: 0.5em;
+												    position: relative;
+												    -webkit-transition: background-color 0.2s, margin-top 0.2s;
+												    /* Saf3.2+, Chrome */
+												    -moz-transition: background-color 0.2s, margin-top 0.2s;
+												    /* FF4+ */
+												    -ms-transition: background-color 0.2s, margin-top 0.2s;
+												    /* IE10 */
+												    -o-transition: background-color 0.2s, margin-top 0.2s;
+												    /* Opera 10.5+ */
+												    transition: background-color 0.2s, margin-top 0.2s;
+												}
+												
+												.ribbon a:hover span {
+												    b ackground: #FFD204;
+												    margin-top: 0;
+												}
+												
+												.ribbon span:before {
+												    content: "";
+												    position: absolute;
+												    top: 3em;
+												    left: 0;
+												    border-right: 0.5em solid #9B8651;
+												    border-bottom: 0.5em solid #fff;
+												}
+												
+												.ribbon span:after {
+												    content: "";
+												    position: absolute;
+												    top: 3em;
+												    right: 0;
+												    border-left: 0.5em solid #9B8651;
+												    border-bottom: 0.5em solid #fff;
+												}
+												
+												.introduce {
+												    display: flex;
+												    flex-direction: column;
+													flex-shrink: 0;
+												}
+												
+												.introduce_item {
+												    display: flex;
+												    justify-content: center;
+												    margin-top: 60px;
+												}
+												
+												.introduce_item_img {
+												    width: 700px;
+												    height: 400px;
+												    border-radius: 10px;
+												
+												}
+												
+												.introduce_item_title {
+												    color: rgb(5, 39, 20);
+												    width: 50%;
+												    font-size: 18px;
+												    line-height: 36px;
+												    align-self: center;
+												    padding-left: 100px;
+												}
+												
+												.introduce_item_titles {
+												    width: 500px;
+												    font-size: 18px;
+												    line-height: 36px;
+												    align-self: center;
+												    padding-right: 100px;
+												}
+												
+												audio {
+												    position: fixed;
+												    bottom: 50px;
+												    right: 0;
+												}
+												
+												.music_img {
+												    position: fixed;
+												    bottom: 50px;
+												    right: 50px;
+												    width: 40px;
+												    height: 30px;
+												    animation: muscis 5s linear infinite;
+												}
+												
+												@keyframes muscis {
+												    from {
+												        transform: rotate (0deg);
+												        opacity: .6;
+												    }
+												    to {
+												        transform: rotate(360deg);
+												        opacity: .8;
+												    }
+												}
+												
+												.icons {
+												    display: flex;
+												    justify-content: space-between;
+												    padding: 10px 400px;
+												    box-sizing: border-box;
+												    overflow: hidden;
+													
+												}
+												
+												.icons_items {
+												    display: flex;
+												    flex-direction: column;
+												    font-size: 20px;
+												    margin-top: 80px;
+												    margin-left: 5px;
+												    margin-right: 5px;
+												    width: 200px;
+												    height: 220px;
+												    
+												}
+												
+												.icons_items_imgs {
+												    border-radius: 10%;
+												    width: 200px;
+												    height: 120px;
+												    margin-bottom: 30px;
+												}
+												
+												/* .nav-systems{
+												    display: flex;
+												    width: 500px;
+												    height: 50px;
+												    margin: auto;
+												} */
+												.box_introduce{
+												    width: 100%;
+												    /* 超出部分隐藏 */
+												    overflow: hidden;
+												    flex-direction: column;
+												    display: flex;
+												}
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												/* 软盘图标 */
+												.softdrivecard
+												 {
+												  width: 300px;
+												  height: 300px;
+												  background-image: linear-gradient(to right bottom, #252324, #292728, #2d2c2d, #313031, #353535);
+												  position: relative;
+												  border-radius: 5px;
+												  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.307);
+												}
+												
+												.softdrivecardtop {
+												  position: absolute;
+												  width: 65%;
+												  height: 37%;
+												  top: 0;
+												  left: 37px;
+												  background-image: linear-gradient(to right bottom, #202020, #222222, #232323, #252525, #272727);
+												  z-index: 500;
+												  border-top: 4px solid #e8e8e8;
+												  border-right: 3px solid #121212;
+												  border-bottom: 3px solid #121212;
+												  border-left: 3px solid #121212;
+												  border-bottom-left-radius: 10px;
+												  border-bottom-right-radius: 10px;
+												}
+												
+												.softdrivecardplastic {
+												  position: absolute;
+												  top: 0;
+												  right: 60px;
+												  width: 60px;
+												  background-color: black;
+												  height: 100%;
+												  z-index: 1000;
+												  border-top: 25px solid white;
+												}
+												
+												.softdrivecardbottom {
+												  z-index: 1000;
+												  position: absolute;
+												  bottom: 1px;
+												  right: 50%;
+												  transform: translate(50%,0);
+												  width: 75%;
+												  height: 52%;
+												  background-color: #ecebe0;
+												  border-top-left-radius: 5px;
+												  border-top-right-radius: 5px;
+												  border-top: 3px solid #121212;
+												  border-left: 3px solid #121212;
+												  border-right: 3px solid #121212;
+												  border-radius: 10px;
+												}
+												
+												.softdrivecardmetal {
+												  z-index: 2000;
+												  position: absolute;
+												  top: -3px;
+												  right: 0;
+												  width: 77%;
+												  height: 103%;
+												  background-image: linear-gradient(to right bottom, #bdbdbd, #cacaca, #d7d7d7, #e5e5e5, #f2f2f2);
+												  border-bottom-left-radius: 10px;
+												  border-bottom-right-radius: 10px;
+												  transition: transform 0.2s ease-in;
+												  clip-path: polygon(0% 0%, 0% 100%, 60% 100%, 60% 18%, 85% 18%, 85% 93%, 25% 93%, 25% 100%, 100% 100%, 100% 0%);
+												}
+												
+												.softdrivecardcuadro-metal {
+												  position: absolute;
+												  top: 15px;
+												  right: 45px;
+												  width: 40px;
+												  transform: translate(50%,0);
+												  height: 80px;
+												  background-color: #252324;
+												  z-index: 2000;
+												  transition: transform 0.2s ease-in;
+												  border-radius: 3px;
+												}
+												
+												.softdrivecard:hover .softdrivecardmetal {
+												  transform: translateX(-44px);
+												}
+												
+												.softdrivecard:hover .softdrivecardcuadro-metal {
+												  transform: translateX(-30px);
+												}
+												
+												.softdrivecardminicuadro1 {
+												  bottom: 25px;
+												  right: 12px;
+												  position: absolute;
+												  width: 17px;
+												  height: 17px;
+												  background-color: #d7d7d7;
+												  border: 2px solid #191919;
+												}
+												
+												.softdrivecardminicuadro2 {
+												  bottom: 25px;
+												  left: 12px;
+												  position: absolute;
+												  width: 17px;
+												  height: 17px;
+												  background-image: linear-gradient(to right bottom, #191919, #202020, #272727, #2e2e2e, #353535);
+												  border: 2px solid #191919;
+												}
+												
+												.softdrivecardyellow {
+												  position: absolute;
+												  bottom: 0;
+												  width: 100%;
+												  height: 23px;
+												  background-color: rgb(255, 157, 0);
+												}
+												
+												
+												
+												.softdrivecardindex {
+												 position: absolute;
+												 bottom:15%;
+												 right: 50%;
+												 transform: translate(50%,0);
+												 width: auto;
+												 height: auto;
+												 /* background-color: rgb(192, 33, 33); */
+												 z-index: 2000;
+												}
+												
+												
+												
+												
+												
+												/* 
+												美刀人民币卡片
+												 （购买卡片）
+												 */ 
+												.paycontainer {
+													margin-left: auto;
+													margin-right: auto;
+													margin-top: 3.125rem;
+													margin-bottom: 3.125rem;
+												  background-color: #ffffff;
+												  display: flex;
+												  width: 270px;
+												  height: 120px;
+												  position: relative;
+												  border-radius: 6px;
+												  transition: 0.3s ease-in-out;
+												}
+												
+												.paycontainer:hover {
+												  transform: scale(1.03);
+												}
+												
+												.paycontainer:hover .pay-left-side {
+												  width: 100%;
+												}
+												
+												.pay-left-side {
+												  
+												  backdrop-filter: blur(10px);
+												  transform: rotate(calc(var(--r) * 1deg));
+												  border-radius: 30px;
+												  background: linear-gradient(#5de2a3, transparent);
+												  
+												  width: 130px;
+												  height: 120px;
+												  border-radius: 4px;
+												  position: relative;
+												  display: flex;
+												  justify-content: center;
+												  align-items: center;
+												  cursor: pointer;
+												  transition: 0.3s;
+												  flex-shrink: 0;
+												  overflow: hidden;
+												}
+												
+												.pay-right-side {
+												  display: flex;
+												  align-items: center;
+												  overflow: hidden;
+												  cursor: pointer;
+												  justify-content: space-between;
+												  white-space: nowrap;
+												  transition: 0.3s;
+												}
+												
+												.pay-right-side:hover {
+												  background-color: #f9f7f9;
+												}
+												
+												.pay-arrow {
+												  width: 20px;
+												  height: 20px;
+												  margin-right: 20px;
+												}
+												
+												.pay-new {
+												  font-size: 23px;
+												  font-family: "Lexend Deca", sans-serif;
+												  margin-left: 20px;
+												}
+												
+												.pay-card {
+												  width: 70px;
+												  height: 46px;
+												  background-color: #c7ffbc;
+												  border-radius: 6px;
+												  position: absolute;
+												  display: flex;
+												  z-index: 10;
+												  flex-direction: column;
+												  align-items: center;
+												  -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+												  -moz-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+												  -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+												}
+												
+												.pay-card-line {
+												  width: 65px;
+												  height: 13px;
+												  background-color: #80ea69;
+												  border-radius: 2px;
+												  margin-top: 7px;
+												}
+												
+												@media only screen and (max-width: 480px) {
+												  .paycontainer {
+												    transform: scale(0.7);
+												  }
+												
+												  .paycontainer:hover {
+												    transform: scale(0.74);
+												  }
+												
+												  .pay-new {
+												    font-size: 18px;
+												  }
+												}
+												
+												.pay-buttons {
+												  width: 8px;
+												  height: 8px;
+												  background-color: #379e1f;
+												  box-shadow: 0 -10px 0 0 #26850e, 0 10px 0 0 #56be3e;
+												  border-radius: 50%;
+												  margin-top: 5px;
+												  transform: rotate(90deg);
+												  margin: 10px 0 0 -30px;
+												}
+												
+												.paycontainer:hover .pay-card {
+												  animation: slide-top 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+												}
+												
+												.paycontainer:hover .pay-post {
+												  animation: slide-post 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+												}
+												
+												@keyframes slide-top {
+												  0% {
+												    -webkit-transform: translateY(0);
+												    transform: translateY(0);
+												  }
+												
+												  50% {
+												    -webkit-transform: translateY(-70px) rotate(90deg);
+												    transform: translateY(-70px) rotate(90deg);
+												  }
+												
+												  60% {
+												    -webkit-transform: translateY(-70px) rotate(90deg);
+												    transform: translateY(-70px) rotate(90deg);
+												  }
+												
+												  100% {
+												    -webkit-transform: translateY(-8px) rotate(90deg);
+												    transform: translateY(-8px) rotate(90deg);
+												  }
+												}
+												
+												.pay-post {
+												  width: 63px;
+												  height: 75px;
+												  background-color: #dddde0;
+												  position: absolute;
+												  z-index: 11;
+												  bottom: 10px;
+												  top: 120px;
+												  border-radius: 6px;
+												  overflow: hidden;
+												}
+												
+												.pay-post-line {
+												  width: 47px;
+												  height: 9px;
+												  background-color: #545354;
+												  position: absolute;
+												  border-radius: 0px 0px 3px 3px;
+												  right: 8px;
+												  top: 8px;
+												}
+												
+												.pay-post-line:before {
+												  content: "";
+												  position: absolute;
+												  width: 47px;
+												  height: 9px;
+												  background-color: #757375;
+												  top: -8px;
+												}
+												
+												.pay-screen {
+												  width: 47px;
+												  height: 23px;
+												  background-color: #ffffff;
+												  position: absolute;
+												  top: 22px;
+												  right: 8px;
+												  border-radius: 3px;
+												}
+												
+												.pay-numbers {
+												  width: 12px;
+												  height: 12px;
+												  background-color: #838183;
+												  box-shadow: 0 -18px 0 0 #838183, 0 18px 0 0 #838183;
+												  border-radius: 2px;
+												  position: absolute;
+												  transform: rotate(90deg);
+												  left: 25px;
+												  top: 52px;
+												}
+												
+												.pay-numbers-line2 {
+												  width: 12px;
+												  height: 12px;
+												  background-color: #aaa9ab;
+												  box-shadow: 0 -18px 0 0 #aaa9ab, 0 18px 0 0 #aaa9ab;
+												  border-radius: 2px;
+												  position: absolute;
+												  transform: rotate(90deg);
+												  left: 25px;
+												  top: 68px;
+												}
+												
+												@keyframes slide-post {
+												  50% {
+												    -webkit-transform: translateY(0);
+												    transform: translateY(0);
+												  }
+												
+												  100% {
+												    -webkit-transform: translateY(-70px);
+												    transform: translateY(-70px);
+												  }
+												}
+												
+												.pay-dollar {
+												  position: absolute;
+												  font-size: 16px;
+												  font-family: "Lexend Deca", sans-serif;
+												  width: 100%;
+												  left: 0;
+												  top: 0;
+												  color: #4b953b;
+												  text-align: center;
+												}
+												
+												.paycontainer:hover .dollar {
+												  animation: fade-in-fwd 0.3s 1s backwards;
+												}
+												
+												@keyframes fade-in-fwd {
+												  0% {
+												    opacity: 0;
+												    transform: translateY(-5px);
+												  }
+												
+												  100% {
+												    opacity: 1;
+												    transform: translateY(0);
+												  }
+												}
+												
+												
+												
+												
+												/* 
+												更多信息卡片（moreinfo）
+												 有关地平线的更多信息
+												 */
+												.info-card {
+												 width: 100%;
+												 height: auto;
+												 border-radius: 20px;
+												 
+												 /* 统一毛玻璃控制 */
+												 backdrop-filter: blur(10px);
+												 transform: rotate(calc(var(--r) * 1deg));
+												 border-radius: 30px;
+												 background: linear-gradient(#00a4ef, transparent);
+												 
+												 position: relative;
+												 padding: 1.8rem;
+												 border: 2px solid #c3c6ce;
+												 transition: 0.5s ease-out;
+												 overflow: visible;
+												}
+												
+												.info-card-details {
+												 color: black;
+												 height: 100%;
+												 gap: .5em;
+												 display: grid;
+												 place-content: center;
+												}
+												
+												.infocard-button {
+												 transform: translate(-50%, 125%);
+												 width: 60%;
+												 border-radius: 1rem;
+												 border: none;
+												 background-color: #008bf8;
+												 color: #fff;
+												 font-size: 1rem;
+												 padding: .5rem 1rem;
+												 position: absolute;
+												 left: 50%;
+												 bottom: 0;
+												 opacity: 0;
+												 transition: 0.3s ease-out;
+												}
+												
+												.infocard-text-body {
+												 color: rgb(255, 255, 255);
+												}
+												
+												/*Text*/
+												.info-card-text-title {
+												 font-size: 1.5em;
+												 font-weight: bold;
+												}
+												
+												/*Hover*/
+												.info-card:hover {
+												 border-color: #008bf8;
+												 box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+												}
+												
+												.info-card:hover .infocard-button {
+												 transform: translate(-50%, 50%);
+												 opacity: 1;
+												}
+												</textarea>
+												  </div>
+												</div>												
+
+
+
+
+
+
+												
+												
+											
+										</section>
+								
 
 
 
 				
 				
 		    </div>
-		</section>
     </main>
-<!-- 隐私条款（弹窗） -->
-	<div class="Privacy_Terms" id="privacy-modal">
-		<article class="Privacy_Terms-container">
-			<header class="Privacy_Terms-container-header">
-				<span class="Privacy_Terms-container-title">
-					<svg aria-hidden="true" height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 0h24v24H0z" fill="none"></path>
-						<path d="M14 9V4H5v16h6.056c.328.417.724.785 1.18 1.085l1.39.915H3.993A.993.993 0 0 1 3 21.008V2.992C3 2.455 3.449 2 4.002 2h10.995L21 8v1h-7zm-2 2h9v5.949c0 .99-.501 1.916-1.336 2.465L16.5 21.498l-3.164-2.084A2.953 2.953 0 0 1 12 16.95V11zm2 5.949c0 .316.162.614.436.795l2.064 1.36 2.064-1.36a.954.954 0 0 0 .436-.795V13h-5v3.949z" fill="currentColor"></path>
-					</svg>
-					网站隐私声明和服务条款
-				</span>
-				<button class="icon-button" id="close-modal">
-					<svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 0h24v24H0z" fill="none"></path>
-						<path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" fill="currentColor"></path>
-					</svg>
-				</button>
-			</header>
-			<section class="Privacy_Terms-container-body rtf">
-				<h1>啃啃的游戏站隐私声明概览</h1>
-				    <p>啃啃的游戏站严格遵守《中华人民共和国个人信息保护法》及相关法律法规，致力于保护玩家隐私权益。我们收集的信息包括但不限于游戏账户信息、游戏数据和社区互动数据，仅用于提供和改进服务。我们采用加密技术保护数据安全，严格限制数据访问，并承诺在个人信息泄露时及时通知用户。</p>
-				    
-				    <h2>主要措施包括：</h2>
-				    <ul>
-				        <li><strong>最小化数据收集</strong>：仅收集实现服务目的所需的信息。</li>
-				        <li><strong>数据加密</strong>：使用加密技术保护数据传输和存储的安全性。</li>
-				        <li><strong>访问控制</strong>：确保只有授权人员可以访问个人信息。</li>
-				        <li><strong>安全培训</strong>：定期举办安全和隐私保护培训，提高员工意识。</li>
-				    </ul>
-				    
-				    <h1>啃啃的游戏站服务条款概览</h1>
-				    <p>啃啃的游戏站服务条款明确了用户与啃啃的游戏站之间的权利和义务，要求用户在使用服务前阅读并同意这些条款。用户应遵守法律法规，不得从事违法违规行为。啃啃的游戏站保留对服务条款的最终解释权，并有权根据法律法规或服务需求进行更新或更改。</p>
-				    
-				    <h2>关键条款包括：</h2>
-				    <ul>
-				        <li><strong>账号与密码安全</strong>：用户负责妥善保管自己的账号和密码。</li>
-				        <li><strong>个人信息保护</strong>：啃啃的游戏站承诺按照隐私政策保护用户个人信息。</li>
-				        <li><strong>使用规则</strong>：用户应通过官方认可的方式使用服务，不得干扰或破坏服务。</li>
-				        <li><strong>广告</strong>：用户同意接收啃啃的游戏站通过不同方式发送的广告。</li>
-				        <li><strong>服务费用</strong>：部分服务可能涉及收费，用户应遵守相关收费标准。</li>
-				    </ul>
-				    
-				    <p>请注意，以上总结仅供参考，请查阅完整的隐私声明和服务条款。</p>
-			</section>
-			<footer class="Privacy_Terms-container-footer">
-				<button class="button is-ghost" id="decline-button">拒绝</button>
-				<button class="button is-primary" id="accept-button">同意</button>
-			</footer>
-		</article>
-	</div>
+										<!-- 隐私条款（弹窗） -->
+											<div class="Privacy_Terms" id="privacy-modal">
+												<article class="Privacy_Terms-container">
+													<header class="Privacy_Terms-container-header">
+														<span class="Privacy_Terms-container-title">
+															<svg aria-hidden="true" height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+																<path d="M0 0h24v24H0z" fill="none"></path>
+																<path d="M14 9V4H5v16h6.056c.328.417.724.785 1.18 1.085l1.39.915H3.993A.993.993 0 0 1 3 21.008V2.992C3 2.455 3.449 2 4.002 2h10.995L21 8v1h-7zm-2 2h9v5.949c0 .99-.501 1.916-1.336 2.465L16.5 21.498l-3.164-2.084A2.953 2.953 0 0 1 12 16.95V11zm2 5.949c0 .316.162.614.436.795l2.064 1.36 2.064-1.36a.954.954 0 0 0 .436-.795V13h-5v3.949z" fill="currentColor"></path>
+															</svg>
+															网站隐私声明和服务条款
+														</span>
+														<button class="icon-button" id="close-modal">
+															<svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+																<path d="M0 0h24v24H0z" fill="none"></path>
+																<path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" fill="currentColor"></path>
+															</svg>
+														</button>
+													</header>
+													<section class="Privacy_Terms-container-body rtf">
+														<h1>啃啃的游戏站隐私声明概览</h1>
+															<p>啃啃的游戏站严格遵守《中华人民共和国个人信息保护法》及相关法律法规，致力于保护玩家隐私权益。我们收集的信息包括但不限于游戏账户信息、游戏数据和社区互动数据，仅用于提供和改进服务。我们采用加密技术保护数据安全，严格限制数据访问，并承诺在个人信息泄露时及时通知用户。</p>
+															
+															<h2>主要措施包括：</h2>
+															<ul>
+																<li><strong>最小化数据收集</strong>：仅收集实现服务目的所需的信息。</li>
+																<li><strong>数据加密</strong>：使用加密技术保护数据传输和存储的安全性。</li>
+																<li><strong>访问控制</strong>：确保只有授权人员可以访问个人信息。</li>
+																<li><strong>安全培训</strong>：定期举办安全和隐私保护培训，提高员工意识。</li>
+															</ul>
+															
+															<h1>啃啃的游戏站服务条款概览</h1>
+															<p>啃啃的游戏站服务条款明确了用户与啃啃的游戏站之间的权利和义务，要求用户在使用服务前阅读并同意这些条款。用户应遵守法律法规，不得从事违法违规行为。啃啃的游戏站保留对服务条款的最终解释权，并有权根据法律法规或服务需求进行更新或更改。</p>
+															
+															<h2>关键条款包括：</h2>
+															<ul>
+																<li><strong>账号与密码安全</strong>：用户负责妥善保管自己的账号和密码。</li>
+																<li><strong>个人信息保护</strong>：啃啃的游戏站承诺按照隐私政策保护用户个人信息。</li>
+																<li><strong>使用规则</strong>：用户应通过官方认可的方式使用服务，不得干扰或破坏服务。</li>
+																<li><strong>广告</strong>：用户同意接收啃啃的游戏站通过不同方式发送的广告。</li>
+																<li><strong>服务费用</strong>：部分服务可能涉及收费，用户应遵守相关收费标准。</li>
+															</ul>
+															
+															<p>请注意，以上总结仅供参考，请查阅完整的隐私声明和服务条款。</p>
+													</section>
+													<footer class="Privacy_Terms-container-footer">
+														<button class="button is-ghost" id="decline-button">拒绝</button>
+														<button class="button is-primary" id="accept-button">同意</button>
+													</footer>
+												</article>
+											</div>
     <!-- 页脚 -->
     <footer class="footer">
 		<!-- 电子时钟 -->

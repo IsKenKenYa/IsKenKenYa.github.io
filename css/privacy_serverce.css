@@ -35,6 +35,12 @@
   line-height: 1;
   font-weight: 700;
   font-size: 1.125rem;
+  font-family: TermsTitle;
+}
+
+.Privacy_Terms-container-title @font-face {
+	font-family: TermsTitle;
+	src: url('./fronts/字魂扁桃体.woff2');
 }
 
 .Privacy_Terms-container-title svg {
