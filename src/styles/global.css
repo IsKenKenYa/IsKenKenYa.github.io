@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+/* 基于 class 的暗色模式：ThemeToggle 切换 <html class="dark">，优先跟随系统 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ============ 打印 / 导出 PDF ============ */
+@media print {
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* 标题、区块、条目不被分页截断 */
+  h1,
+  h2,
+  h3,
+  section,
+  li {
+    break-inside: avoid;
+  }
+}

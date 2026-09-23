@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import PrintButton from '../../components/PrintButton';
+import Section from '../../components/Section.astro';
+import { resume } from '../../data/resume';
+import { useTranslations } from '../../i18n/utils';
+import type { Lang } from '../../i18n/ui';
+
+const lang: Lang = 'en';
+const t = useTranslations(lang);
+const { profile, skillGroups, experience, education, projects } = resume;
+---
+
+<BaseLayout lang={lang} altUrl="/" title={t('site.title')} description={profile.intro[lang]}>
+  <header class="mb-12">
+    <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">{profile.name[lang]}</h1>
+    <p class="mt-2 text-lg text-zinc-500 dark:text-zinc-400">{profile.role[lang]}</p>
+    <div
+      class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-600 dark:text-zinc-400"
+    >
+      <span>{profile.location[lang]}</span>
+      <a
+        href={`mailto:${profile.contacts.email}`}
+        class="transition hover:text-zinc-900 dark:hover:text-zinc-100"
+      >
+        {profile.contacts.email}
+      </a>
+      <a
+        href={profile.contacts.github}
+        class="transition hover:text-zinc-900 dark:hover:text-zinc-100"
+        rel="me"
+      >
+        GitHub
+      </a>
+    </div>
+    <div class="mt-6">
+      <PrintButton client:load label={t('action.print')} />
+    </div>
+  </header>
+
+  <div class="space-y-12">
+    <Section title={t('section.about')}>
+      <p class="leading-7 text-zinc-700 dark:text-zinc-300">{profile.intro[lang]}</p>
+    </Section>
+
+    <Section title={t('section.skills')}>
+      <div class="space-y-5">
+        {
+          skillGroups.map((group) => (
+            <div class="break-inside-avoid">
+              <h3 class="text-sm font-medium">{group.name[lang]}</h3>
+              <ul class="mt-2 flex flex-wrap gap-1.5">
+                {group.items.map((item) => (
+                  <li class="rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </Section>
+
+    <Section title={t('section.experience')}>
+      <ol class="space-y-8">
+        {
+          experience.map((job) => (
+            <li class="break-inside-avoid">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="font-semibold">{job.company}</h3>
+                <span class="text-sm text-zinc-500 dark:text-zinc-400">{job.period}</span>
+              </div>
+              <p class="mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">{job.role[lang]}</p>
+              <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+                {job.points[lang].map((point) => (
+                  <li>{point}</li>
+                ))}
+              </ul>
+            </li>
+          ))
+        }
+      </ol>
+    </Section>
+
+    <Section id="projects" title={t('section.projects')}>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {
+          projects.map((project) => (
+            <ProjectCard
+              project={project}
+              lang={lang}
+              href={`/en/projects/${project.slug}/`}
+            />
+          ))
+        }
+      </div>
+    </Section>
+
+    <Section title={t('section.education')}>
+      <div class="space-y-6">
+        {
+          education.map((school) => (
+            <div class="break-inside-avoid">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="font-semibold">{school.school}</h3>
+                <span class="text-sm text-zinc-500 dark:text-zinc-400">{school.period}</span>
+              </div>
+              <p class="mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">{school.degree[lang]}</p>
+            </div>
+          ))
+        }
+      </div>
+    </Section>
+  </div>
+</BaseLayout>

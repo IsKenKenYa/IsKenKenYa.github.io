@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { resume, type Project } from '../../../data/resume';
+import { useTranslations } from '../../../i18n/utils';
+import type { Lang } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return resume.projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const lang: Lang = 'en';
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  altUrl={`/projects/${project.slug}/`}
+  title={`${project.title[lang]} · ${t('site.title')}`}
+  description={project.description[lang]}
+>
+  <a
+    href="/en/"
+    class="text-sm text-zinc-500 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 print:hidden"
+  >
+    ← {t('project.backHome')}
+  </a>
+
+  <header class="mt-6">
+    <h1 class="text-3xl font-bold tracking-tight">{project.title[lang]}</h1>
+    <p class="mt-2 text-zinc-500 dark:text-zinc-400">{project.tagline[lang]}</p>
+    {
+      (project.links?.live || project.links?.repo) && (
+        <div class="mt-4 flex flex-wrap gap-4 text-sm font-medium">
+          {project.links?.live && (
+            <a
+              href={project.links.live}
+              class="text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-900 dark:text-zinc-100 dark:decoration-zinc-600 dark:hover:decoration-zinc-100"
+            >
+              {t('project.viewOnline')} ↗
+            </a>
+          )}
+          {project.links?.repo && (
+            <a
+              href={project.links.repo}
+              class="text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-900 dark:text-zinc-100 dark:decoration-zinc-600 dark:hover:decoration-zinc-100"
+            >
+              {t('project.sourceCode')} ↗
+            </a>
+          )}
+        </div>
+      )
+    }
+  </header>
+
+  <div class="mt-10 space-y-10">
+    <section class="break-inside-avoid">
+      <h2
+        class="mb-3 text-xs font-semibold tracking-widest text-zinc-400 uppercase print:text-zinc-600 dark:text-zinc-500"
+      >
+        {t('project.overview')}
+      </h2>
+      <p class="leading-7 text-zinc-700 dark:text-zinc-300">{project.description[lang]}</p>
+    </section>
+
+    <section class="break-inside-avoid">
+      <h2
+        class="mb-3 text-xs font-semibold tracking-widest text-zinc-400 uppercase print:text-zinc-600 dark:text-zinc-500"
+      >
+        {t('project.highlights')}
+      </h2>
+      <ul class="list-disc space-y-1.5 pl-5 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+        {project.highlights[lang].map((point) => <li>{point}</li>)}
+      </ul>
+    </section>
+
+    <section class="break-inside-avoid">
+      <h2
+        class="mb-3 text-xs font-semibold tracking-widest text-zinc-400 uppercase print:text-zinc-600 dark:text-zinc-500"
+      >
+        {t('project.techStack')}
+      </h2>
+      <ul class="flex flex-wrap gap-1.5">
+        {
+          project.tech.map((item) => (
+            <li class="rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
+              {item}
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </div>
+</BaseLayout>
