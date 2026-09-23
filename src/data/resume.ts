@@ -20,6 +20,8 @@ export interface Project {
   icon: IconName;
   /** 图片 logo（优先于 icon 显示，放 public/logos/ 下） */
   logo?: string;
+  /** 暗色主题用的 logo 变体（不传则亮暗共用 logo） */
+  logoDark?: string;
   period?: Localized<string>;
   status?: Localized<string>;
   title: Localized<string>;
@@ -221,6 +223,8 @@ export const resume = {
     {
       slug: 'visionflow',
       icon: 'sparkles',
+      logo: '/logos/visionflow-light.png',
+      logoDark: '/logos/visionflow-dark.png',
       period: { zh: '2025.11 – 2026.04', en: '2025.11 – 2026.04' },
       status: { zh: '已上线 · SaaS 多域名', en: 'Live · SaaS, multiple domains' },
       title: { zh: 'VisionFlow — AI 生图生视频平台', en: 'VisionFlow — AI Image & Video Platform' },

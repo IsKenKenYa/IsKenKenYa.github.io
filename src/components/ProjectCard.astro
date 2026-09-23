@@ -21,7 +21,24 @@ const { project, lang, href } = Astro.props;
   >
     {
       project.logo ? (
-        <img src={project.logo} alt="" class="h-10 w-10 object-contain" loading="lazy" />
+        project.logoDark ? (
+          <>
+            <img
+              src={project.logo}
+              alt=""
+              class="h-10 w-10 object-contain dark:hidden"
+              loading="lazy"
+            />
+            <img
+              src={project.logoDark}
+              alt=""
+              class="hidden h-10 w-10 object-contain dark:block"
+              loading="lazy"
+            />
+          </>
+        ) : (
+          <img src={project.logo} alt="" class="h-10 w-10 object-contain" loading="lazy" />
+        )
       ) : (
         <span class="text-accent">
           <Icon name={project.icon} size={26} />

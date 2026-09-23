@@ -38,7 +38,24 @@ const t = useTranslations(lang);
     <div class="flex items-center gap-3">
       {
         project.logo ? (
-          <img src={project.logo} alt="" class="h-9 w-9 object-contain" loading="lazy" />
+          project.logoDark ? (
+            <>
+              <img
+                src={project.logo}
+                alt=""
+                class="h-9 w-9 object-contain dark:hidden"
+                loading="lazy"
+              />
+              <img
+                src={project.logoDark}
+                alt=""
+                class="hidden h-9 w-9 object-contain dark:block"
+                loading="lazy"
+              />
+            </>
+          ) : (
+            <img src={project.logo} alt="" class="h-9 w-9 object-contain" loading="lazy" />
+          )
         ) : (
           <span class="text-accent">
             <Icon name={project.icon} size={30} />
