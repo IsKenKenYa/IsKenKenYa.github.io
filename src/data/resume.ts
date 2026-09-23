@@ -147,6 +147,21 @@ export const resume = {
       },
     },
     {
+      company: '福州倍司网络科技有限公司',
+      role: { zh: '全栈开发工程师', en: 'Full-stack Developer' },
+      period: '2026.01 – 2026.05',
+      points: {
+        zh: [
+          '全栈开发 visionflow.im 与 terln.com 跨境电商平台',
+          '基于 LangChain 实现类 n8n / Dify 的工作流系统',
+        ],
+        en: [
+          'Full-stack development of the visionflow.im and terln.com cross-border e-commerce platforms',
+          'Built an n8n / Dify-style workflow system on LangChain',
+        ],
+      },
+    },
+    {
       company: '福州市骏拓数智科技有限公司',
       role: { zh: '全栈 AI 软件开发工程师（实习）', en: 'Full-stack AI Software Engineer (Intern)' },
       period: '2025.07 – 2025.12',
