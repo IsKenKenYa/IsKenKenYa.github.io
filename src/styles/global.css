@@ -156,4 +156,34 @@ body {
   .no-print {
     display: none !important;
   }
+
+  /* 首页 DOM 顺序为「项目在前」（网页首屏观感），打印时恢复简历惯例排序 */
+  main > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #sec-about {
+    order: 1;
+  }
+
+  #sec-skills {
+    order: 2;
+  }
+
+  #sec-experience {
+    order: 3;
+  }
+
+  #projects {
+    order: 4;
+  }
+
+  #sec-education {
+    order: 5;
+  }
+
+  #sec-honors {
+    order: 6;
+  }
 }

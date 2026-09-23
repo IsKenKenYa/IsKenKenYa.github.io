@@ -52,7 +52,7 @@ const { profile } = resume;
     <header
       class="sticky top-0 z-10 border-b border-line bg-bg/80 backdrop-blur print:hidden"
     >
-      <div class="mx-auto flex h-14 max-w-3xl items-center justify-between px-4">
+      <div class="mx-auto flex h-14 max-w-4xl items-center justify-between px-4">
         <a href={homeUrl} class="font-mono text-sm font-semibold tracking-tight">
           <span class="text-muted">~/</span>{profile.handle.toLowerCase()}<span class="text-accent">$</span>
         </a>
@@ -75,13 +75,13 @@ const { profile } = resume;
       </div>
     </header>
 
-    <main class="mx-auto w-full max-w-3xl flex-1 px-4 py-10 sm:py-14">
+    <main class="mx-auto w-full max-w-4xl flex-1 px-4 py-10 sm:py-14">
       <slot />
     </main>
 
     <footer class="border-t border-line py-6 print:hidden">
       <div
-        class="mx-auto flex max-w-3xl flex-col gap-2 px-4 font-mono text-xs text-muted sm:flex-row sm:items-center sm:justify-between"
+        class="mx-auto flex max-w-4xl flex-col gap-2 px-4 font-mono text-xs text-muted sm:flex-row sm:items-center sm:justify-between"
       >
         <p>© {new Date().getFullYear()} {profile.name[lang]} · {t('footer.built')}</p>
         <div class="flex items-center gap-4">

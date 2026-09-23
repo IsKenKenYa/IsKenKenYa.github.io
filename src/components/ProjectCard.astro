@@ -16,20 +16,20 @@ const projId = `PROJ_ID_${String(index + 1).padStart(3, '0')}`;
 
 <a
   href={href}
-  class="terminal-card group flex flex-col gap-2 rounded-lg border border-line bg-card p-5 print:break-inside-avoid"
+  class="terminal-card group flex flex-col gap-2.5 rounded-lg border border-line bg-card p-6 print:break-inside-avoid"
 >
   <div class="flex items-center justify-between gap-3">
-    <div class="flex items-center gap-2.5">
+    <div class="flex items-center gap-3">
       {
         project.logo ? (
-          <img src={project.logo} alt="" class="h-[18px] w-[18px] object-contain" loading="lazy" />
+          <img src={project.logo} alt="" class="h-5 w-5 object-contain" loading="lazy" />
         ) : (
           <span class="text-accent">
-            <Icon name={project.icon} size={18} />
+            <Icon name={project.icon} size={20} />
           </span>
         )
       }
-      <span class="font-mono text-[10px] text-muted">{projId}</span>
+      <span class="font-mono text-xs text-muted">{projId}</span>
     </div>
     <span
       aria-hidden="true"
@@ -38,13 +38,13 @@ const projId = `PROJ_ID_${String(index + 1).padStart(3, '0')}`;
       ↗
     </span>
   </div>
-  <h3 class="font-semibold">{project.title[lang]}</h3>
+  <h3 class="text-lg font-semibold">{project.title[lang]}</h3>
   <p class="text-sm text-muted">{project.tagline[lang]}</p>
   {
     project.tech && (
       <ul class="mt-1 flex flex-wrap gap-1.5">
         {project.tech.map((item) => (
-          <li class="rounded-full border border-line px-2.5 py-0.5 font-mono text-[11px] text-muted">
+          <li class="rounded-full border border-line px-3 py-1 font-mono text-xs text-muted">
             {item}
           </li>
         ))}
