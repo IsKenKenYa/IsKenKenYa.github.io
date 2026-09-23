@@ -79,7 +79,11 @@ const { profile, skillGroups, experience, education, honors, projects } = resume
                 <h3 class="font-semibold">{job.company}</h3>
                 <span class="font-mono text-xs text-muted">{job.period}</span>
               </div>
-              <p class="mt-0.5 text-sm text-muted">{job.role[lang]}</p>
+              {
+                job.role && (
+                  <p class="mt-0.5 text-sm text-muted">{job.role[lang]}</p>
+                )
+              }
               <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-6 text-fg/90 marker:text-accent">
                 {job.points[lang].map((point) => (
                   <li>{point}</li>

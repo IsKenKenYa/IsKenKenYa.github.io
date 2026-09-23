@@ -35,7 +35,7 @@ export interface Project {
 
 export interface ExperienceItem {
   company: string;
-  role: Localized<string>;
+  role?: Localized<string>;
   period: string;
   points: Localized<string[]>;
 }
@@ -133,6 +133,18 @@ export const resume = {
   ] satisfies SkillGroup[],
 
   experience: [
+    {
+      company: '福建星美夸克数字科技有限公司',
+      period: '2026.06 – 至今',
+      points: {
+        zh: [
+          '负责 WoowuAgent（挖物 AI 营销 2.0）相关研发：Agent 驱动的 AIGC 创作平台，已上线运营',
+        ],
+        en: [
+          'Working on WoowuAgent (Woowu AI Marketing 2.0): an agent-driven AIGC creation platform, live in production',
+        ],
+      },
+    },
     {
       company: '福州市骏拓数智科技有限公司',
       role: { zh: '全栈 AI 软件开发工程师（实习）', en: 'Full-stack AI Software Engineer (Intern)' },
@@ -233,6 +245,7 @@ export const resume = {
       slug: 'woowuagent',
       icon: 'sparkles',
       logo: '/logos/woowuagent.png',
+      period: { zh: '2026.06 – 至今', en: '2026.06 – present' },
       status: { zh: '已上线 · 内部商业项目', en: 'Live · internal commercial product' },
       title: { zh: 'WoowuAgent — AI 创意工作台', en: 'WoowuAgent — AI Creative Workbench' },
       tagline: {
@@ -240,8 +253,8 @@ export const resume = {
         en: 'Woowu’s agent-based AIGC creation platform',
       },
       description: {
-        zh: '挖物（Woowu）旗下 AI 创作平台（内部商业项目，已上线 wa.woowuclub.com）：在无限画布上与 AI 对话进行创作，对标 Lovart / Canva 的产品形态，数据私有、可私有化部署。',
-        en: 'Woowu’s AI creation platform (internal commercial product, live at wa.woowuclub.com): create on an infinite canvas by talking to an agent — a Lovart / Canva-style workspace that is data-private and self-hostable.',
+        zh: '挖物（Woowu）旗下 AI 创作平台（内部商业项目，已上线 wa.woowuclub.com）：在无限画布上与 AI 对话进行创作，对标 Lovart / Canva 的产品形态，数据私有、可私有化部署。当前迭代方向为挖物 AI 营销 2.0。',
+        en: 'Woowu’s AI creation platform (internal commercial product, live at wa.woowuclub.com): create on an infinite canvas by talking to an agent — a Lovart / Canva-style workspace that is data-private and self-hostable. Current focus: Woowu AI Marketing 2.0.',
       },
       tech: ['Next.js 15', 'React 19', 'Fastify 5', 'LangGraph', 'Excalidraw', 'BullMQ', 'PostgreSQL'],
       highlights: {
@@ -330,30 +343,35 @@ export const resume = {
       },
     },
     {
-      slug: 'im-migration',
-      icon: 'message',
+      slug: 'meiiwo',
+      icon: 'mail',
       period: { zh: '2025.07 – 2025.11', en: '2025.07 – 2025.11' },
-      title: {
-        zh: '某即时通讯应用 uniapp → Flutter 迁移',
-        en: 'IM App Migration: uniapp → Flutter',
+      status: { zh: '已上线 · 已移交', en: 'Live · handed over' },
+      title: { zh: 'Meiiwo 觅我 — 匿名社交 App', en: 'Meiiwo — Anonymous Social App' },
+      tagline: {
+        zh: '纸条匹配 + 限时问答的轻社交',
+        en: 'Note-matching & timed Q&A social app',
       },
-      tagline: { zh: '客户项目 · 独立交付', en: 'Client project · delivered solo' },
       description: {
-        zh: '客户项目：为提升跨端一致性与性能，将即时通讯应用从 uniapp 迁移到 Flutter，独立完成界面与核心业务逻辑的迁移落地，并同步重构安全机制。',
-        en: 'Client project: migrated an instant-messaging app from uniapp to Flutter for cross-platform consistency, delivering the UI and core business logic solo while reworking the security layer.',
+        zh: '基于 OpenIM 的聊天交友 App：用「纸条消息」和「限时问答」做无压力社交（匿名 / 半匿名）。我负责 Flutter 客户端（含 uniapp → Flutter 的全栈迁移）与项目管理，并以 Python 自研服务端完成 OpenIM 的业务适配——过程相当曲折。这是我第一个用 vibe coding 方式完整交付的产品，项目已移交运营。',
+        en: 'An OpenIM-based chat & friendship app built around "note messages" and timed Q&A for low-pressure, semi-anonymous socializing. I built the Flutter client (including the full uniapp → Flutter migration), ran project management, and wrote a custom Python server layer adapting OpenIM — a bumpy road. My first product shipped end-to-end in a vibe-coding style, since handed over.',
       },
-      tech: ['Flutter', 'Dart', 'uniapp'],
       highlights: {
         zh: [
-          '独立完成 uniapp → Flutter 的界面与核心业务逻辑迁移',
-          '按设计稿还原 UI，采用虚拟滚动、图片懒加载、WebP 压缩优化加载与渲染',
-          '同步推进安全机制的重构升级',
+          '产品形态：纸条匹配（遇见未知的缘分）+ 限时问答社区，匿名 / 半匿名无压力社交',
+          '即时通讯：基于 OpenIM，以 Python 自研服务端完成业务适配',
+          '独立完成 uniapp → Flutter 的全栈迁移：UI 还原、虚拟滚动、图片懒加载、WebP 压缩，并同步重构安全机制',
+          '我的第一个 vibe coding 产物，也是项目管理与 Flutter 工程管理的一次完整练手；项目现已移交',
         ],
         en: [
-          'Migrated screens and core business logic from uniapp to Flutter on my own',
-          'Reproduced the design spec; optimized loading and rendering with virtual scrolling, lazy image loading and WebP compression',
-          'Reworked the security mechanisms along the way',
+          'Product: note-matching + timed Q&A community for low-pressure, semi-anonymous socializing',
+          'Instant messaging: OpenIM-based, with a custom Python server layer for business adaptation',
+          'Solo uniapp → Flutter migration: UI reproduction, virtual scrolling, lazy image loading, WebP compression, plus a security-layer rework',
+          'My first vibe-coding product and a complete exercise in PM & Flutter engineering management; since handed over',
         ],
+      },
+      links: {
+        live: 'https://www.meiiwo.com/',
       },
     },
     {
