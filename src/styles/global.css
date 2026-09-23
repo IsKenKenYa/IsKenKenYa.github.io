@@ -3,6 +3,41 @@
 /* 基于 class 的暗色模式：ThemeToggle 切换 <html class="dark">，优先跟随系统 */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* 终端风配色令牌：亮/暗各一套，组件只用语义 token */
+:root {
+  --bg: #f2f2f2;
+  --fg: #171717;
+  --accent: #00aa2c;
+  --muted: #525252;
+  --card: #ffffff;
+  --line: rgba(23, 23, 23, 0.16);
+  --grid-line: rgba(0, 170, 44, 0.09);
+}
+
+.dark {
+  --bg: #0a0a0a;
+  --fg: #e6e6e6;
+  --accent: #00ff41;
+  --muted: #9ca3af;
+  --card: #111311;
+  --line: rgba(230, 230, 230, 0.16);
+  --grid-line: rgba(0, 255, 65, 0.05);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-line: var(--line);
+}
+
+@theme {
+  --font-mono:
+    'Fira Code', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -13,25 +48,112 @@ html {
   }
 }
 
-/* ============ 打印 / 导出 PDF ============ */
+/* 全屏终端网格背景（双层 1px 渐变线） */
+body {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+/* 卡片 hover：霓虹描边 + 泛光 */
+.terminal-card {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.terminal-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.glow {
+  text-shadow: 0 0 10px color-mix(in srgb, var(--accent) 65%, transparent);
+}
+
+/* 打字机：完整文本始终在 DOM 里，只用宽度动画逐字揭示（打印/减动效时直接显示全文） */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  width: 0;
+  animation: typing 1.3s steps(16, end) 0.25s forwards;
+}
+
+.cursor-blink {
+  display: inline-block;
+  animation: blink 1.05s step-end infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 16ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter {
+    width: auto;
+    animation: none;
+  }
+
+  .cursor-blink {
+    animation: none;
+  }
+}
+
+/* ============ 打印 / 导出 PDF：剥掉装饰，输出黑白简历 ============ */
 @media print {
   html,
   body {
     background: #fff !important;
+    background-image: none !important;
     color: #000 !important;
   }
 
+  /* 无论当前是明是暗，打印一律黑字白底：重置所有变量色/背景/发光 */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    border-color: #bbb !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
   a {
-    color: inherit !important;
     text-decoration: none !important;
   }
 
-  /* 标题、区块、条目不被分页截断 */
   h1,
   h2,
   h3,
   section,
   li {
     break-inside: avoid;
+  }
+
+  .typewriter {
+    width: auto !important;
+    animation: none !important;
+  }
+
+  .cursor-blink,
+  .no-print {
+    display: none !important;
   }
 }

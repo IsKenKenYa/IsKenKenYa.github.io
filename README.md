@@ -7,7 +7,7 @@
 ## 技术栈
 
 - [Astro](https://astro.build) 静态输出 + React islands（仅主题切换、打印按钮两处）
-- [Tailwind CSS](https://tailwindcss.com) v4
+- [Tailwind CSS](https://tailwindcss.com) v4，终端风界面（Fira Code 自托管）
 - TypeScript · pnpm
 - 部署：GitHub Actions → GitHub Pages（推送 `main` 即自动发布）
 

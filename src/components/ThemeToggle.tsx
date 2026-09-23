@@ -6,8 +6,8 @@ function SunIcon() {
   return (
     <svg
       aria-hidden="true"
-      width="16"
-      height="16"
+      width="15"
+      height="15"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -25,8 +25,8 @@ function MoonIcon() {
   return (
     <svg
       aria-hidden="true"
-      width="16"
-      height="16"
+      width="15"
+      height="15"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -59,7 +59,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="rounded-md p-2 text-zinc-600 transition hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100 print:hidden"
+      className="rounded-md p-2 text-muted transition hover:bg-accent/10 hover:text-accent print:hidden"
     >
       {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
     </button>

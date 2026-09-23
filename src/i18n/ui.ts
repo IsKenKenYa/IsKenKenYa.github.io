@@ -12,17 +12,24 @@ export type Lang = keyof typeof languages;
 
 export const defaultLang: Lang = 'zh';
 
+/** 语言代码（终端风 UI 里显示 zh_CN / en_US） */
+export const langCode = {
+  zh: 'zh_CN',
+  en: 'en_US',
+} as const;
+
 export const ui = {
   zh: {
-    'site.title': '啃啃 · 个人简历',
-    'nav.home': '首页',
-    'nav.projects': '项目',
+    'site.title': '啃啃 · 全栈工程师',
+    'nav.home': '~',
+    'nav.projects': './projects',
     'action.print': '打印 / 导出 PDF',
-    'section.about': '关于我',
-    'section.skills': '技能',
-    'section.experience': '工作经历',
-    'section.projects': '项目作品',
+    'section.about': '个人优势',
+    'section.skills': '专业技能',
+    'section.experience': '实习经历',
+    'section.projects': '项目经历',
     'section.education': '教育经历',
+    'section.honors': '荣誉与证书',
     'project.backHome': '返回首页',
     'project.overview': '项目简介',
     'project.highlights': '主要工作',
@@ -34,15 +41,16 @@ export const ui = {
     'notFound.back': '返回首页',
   },
   en: {
-    'site.title': 'Ken · Resume',
-    'nav.home': 'Home',
-    'nav.projects': 'Projects',
+    'site.title': 'Ken · Full-stack Developer',
+    'nav.home': '~',
+    'nav.projects': './projects',
     'action.print': 'Print / Save as PDF',
-    'section.about': 'About',
+    'section.about': 'Summary',
     'section.skills': 'Skills',
     'section.experience': 'Experience',
     'section.projects': 'Projects',
     'section.education': 'Education',
+    'section.honors': 'Awards & Certificates',
     'project.backHome': 'Back to home',
     'project.overview': 'Overview',
     'project.highlights': 'Highlights',

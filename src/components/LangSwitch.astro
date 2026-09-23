@@ -1,5 +1,5 @@
 ---
-import type { Lang } from '../i18n/ui';
+import { langCode, type Lang } from '../i18n/ui';
 
 interface Props {
   lang: Lang;
@@ -8,19 +8,34 @@ interface Props {
 }
 
 const { lang, altUrl } = Astro.props;
-
-// 按钮上显示「另一种语言」
-const label = lang === 'zh' ? 'EN' : '中文';
+const current = langCode[lang];
+const otherCode = lang === 'zh' ? langCode.en : langCode.zh;
+const otherUrl = altUrl;
 ---
 
+<span class="hidden items-center gap-1.5 text-xs sm:flex">
+  <span class="rounded-md px-2 py-1.5 text-accent glow">[ {current} ]</span>
+  {
+    otherUrl && (
+      <a
+        href={otherUrl}
+        hreflang={lang === 'zh' ? 'en' : 'zh'}
+        class="rounded-md px-2 py-1.5 text-muted transition hover:bg-accent/10 hover:text-accent"
+      >
+        {otherCode}
+      </a>
+    )
+  }
+</span>
+<!-- 移动端空间紧张，只显示切换链接 -->
 {
-  altUrl && (
+  otherUrl && (
     <a
-      href={altUrl}
+      href={otherUrl}
       hreflang={lang === 'zh' ? 'en' : 'zh'}
-      class="rounded-md px-2.5 py-1.5 text-zinc-600 transition hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
+      class="rounded-md px-2 py-1.5 text-xs text-muted transition hover:bg-accent/10 hover:text-accent sm:hidden"
     >
-      {label}
+      {otherCode}
     </a>
   )
 }

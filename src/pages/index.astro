@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import Icon from '../components/Icon.astro';
 import PrintButton from '../components/PrintButton';
+import ProjectCard from '../components/ProjectCard.astro';
 import Section from '../components/Section.astro';
 import { resume } from '../data/resume';
 import { useTranslations } from '../i18n/utils';
@@ -9,7 +10,7 @@ import type { Lang } from '../i18n/ui';
 
 const lang: Lang = 'zh';
 const t = useTranslations(lang);
-const { profile, skillGroups, experience, education, projects } = resume;
+const { profile, skillGroups, experience, education, honors, projects } = resume;
 ---
 
 <BaseLayout
@@ -18,35 +19,41 @@ const { profile, skillGroups, experience, education, projects } = resume;
   title={t('site.title')}
   description={profile.intro[lang]}
 >
-  <header class="mb-12">
-    <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">{profile.name[lang]}</h1>
-    <p class="mt-2 text-lg text-zinc-500 dark:text-zinc-400">{profile.role[lang]}</p>
-    <div
-      class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-600 dark:text-zinc-400"
-    >
-      <span>{profile.location[lang]}</span>
-      <a
-        href={`mailto:${profile.contacts.email}`}
-        class="transition hover:text-zinc-900 dark:hover:text-zinc-100"
-      >
-        {profile.contacts.email}
-      </a>
+  <header class="mb-14">
+    <p class="font-mono text-sm text-accent sm:text-base">
+      <span class="typewriter">Hey, I'm {profile.handle}.</span><span class="cursor-blink">_</span>
+    </p>
+    <h1 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+      {profile.name[lang]}
+      <span class="text-muted">· {profile.role[lang]}</span>
+    </h1>
+    <p class="mt-2 font-mono text-sm text-muted">
+      {profile.openTo[lang]} · {profile.location[lang]}
+    </p>
+    <p class="mt-4 max-w-[65ch] leading-7 text-fg/90">{profile.intro[lang]}</p>
+    <div class="mt-6 flex flex-wrap items-center gap-3">
       <a
         href={profile.contacts.github}
-        class="transition hover:text-zinc-900 dark:hover:text-zinc-100"
         rel="me"
+        class="flex items-center gap-2 rounded-md border border-line px-3 py-2 font-mono text-sm transition hover:border-accent hover:text-accent"
       >
-        GitHub
+        <Icon name="github" size={16} /> GitHub
       </a>
-    </div>
-    <div class="mt-6">
+      <a
+        href={`mailto:${profile.contacts.email}`}
+        class="flex items-center gap-2 rounded-md border border-line px-3 py-2 font-mono text-sm transition hover:border-accent hover:text-accent"
+      >
+        <Icon name="mail" size={16} /> {profile.contacts.email}
+      </a>
       <PrintButton client:load label={t('action.print')} />
     </div>
   </header>
 
   <div class="space-y-12">
     <Section title={t('section.about')}>
-      <p class="leading-7 text-zinc-700 dark:text-zinc-300">{profile.intro[lang]}</p>
+      <ul class="list-disc space-y-1.5 pl-5 text-sm leading-6 text-fg/90 marker:text-accent">
+        {profile.strengths[lang].map((point) => <li>{point}</li>)}
+      </ul>
     </Section>
 
     <Section title={t('section.skills')}>
@@ -54,10 +61,10 @@ const { profile, skillGroups, experience, education, projects } = resume;
         {
           skillGroups.map((group) => (
             <div class="break-inside-avoid">
-              <h3 class="text-sm font-medium">{group.name[lang]}</h3>
+              <h3 class="font-mono text-sm font-medium text-accent">{group.name[lang]}</h3>
               <ul class="mt-2 flex flex-wrap gap-1.5">
-                {group.items.map((item) => (
-                  <li class="rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
+                {group.items[lang].map((item) => (
+                  <li class="rounded-full border border-line bg-card px-3 py-1 font-mono text-[11px] text-fg/80">
                     {item}
                   </li>
                 ))}
@@ -75,10 +82,10 @@ const { profile, skillGroups, experience, education, projects } = resume;
             <li class="break-inside-avoid">
               <div class="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 class="font-semibold">{job.company}</h3>
-                <span class="text-sm text-zinc-500 dark:text-zinc-400">{job.period}</span>
+                <span class="font-mono text-xs text-muted">{job.period}</span>
               </div>
-              <p class="mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">{job.role[lang]}</p>
-              <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+              <p class="mt-0.5 text-sm text-muted">{job.role[lang]}</p>
+              <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-6 text-fg/90 marker:text-accent">
                 {job.points[lang].map((point) => (
                   <li>{point}</li>
                 ))}
@@ -92,8 +99,13 @@ const { profile, skillGroups, experience, education, projects } = resume;
     <Section id="projects" title={t('section.projects')}>
       <div class="grid gap-4 sm:grid-cols-2">
         {
-          projects.map((project) => (
-            <ProjectCard project={project} lang={lang} href={`/projects/${project.slug}/`} />
+          projects.map((project, i) => (
+            <ProjectCard
+              project={project}
+              lang={lang}
+              index={i}
+              href={`/projects/${project.slug}/`}
+            />
           ))
         }
       </div>
@@ -106,9 +118,27 @@ const { profile, skillGroups, experience, education, projects } = resume;
             <div class="break-inside-avoid">
               <div class="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 class="font-semibold">{school.school}</h3>
-                <span class="text-sm text-zinc-500 dark:text-zinc-400">{school.period}</span>
+                <span class="font-mono text-xs text-muted">{school.period}</span>
               </div>
-              <p class="mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">{school.degree[lang]}</p>
+              <p class="mt-0.5 text-sm text-muted">{school.degree[lang]}</p>
+              {school.note && <p class="mt-2 text-sm text-fg/80">{school.note[lang]}</p>}
+            </div>
+          ))
+        }
+      </div>
+    </Section>
+
+    <Section title={t('section.honors')}>
+      <div class="grid gap-5 sm:grid-cols-3">
+        {
+          honors.map((group) => (
+            <div class="break-inside-avoid">
+              <h3 class="font-mono text-sm font-medium text-accent">{group.label[lang]}</h3>
+              <ul class="mt-2 space-y-1.5 text-sm text-fg/90">
+                {group.items[lang].map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
             </div>
           ))
         }

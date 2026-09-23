@@ -1,37 +1,54 @@
 ---
 import type { Project } from '../data/resume';
 import type { Lang } from '../i18n/ui';
+import Icon from './Icon.astro';
 
 interface Props {
   project: Project;
   lang: Lang;
   href: string;
+  index: number;
 }
 
-const { project, lang, href } = Astro.props;
+const { project, lang, href, index } = Astro.props;
+const projId = `PROJ_ID_${String(index + 1).padStart(3, '0')}`;
 ---
 
 <a
   href={href}
-  class="group flex flex-col gap-2 rounded-xl border border-zinc-200 p-5 transition hover:border-zinc-400 hover:shadow-sm print:break-inside-avoid dark:border-zinc-800 dark:hover:border-zinc-600"
+  class="terminal-card group flex flex-col gap-2 rounded-lg border border-line bg-card p-5 print:break-inside-avoid"
 >
   <div class="flex items-center justify-between gap-3">
-    <h3 class="font-semibold">{project.title[lang]}</h3>
+    <div class="flex items-center gap-2.5">
+      {
+        project.logo ? (
+          <img src={project.logo} alt="" class="h-[18px] w-[18px] object-contain" loading="lazy" />
+        ) : (
+          <span class="text-accent">
+            <Icon name={project.icon} size={18} />
+          </span>
+        )
+      }
+      <span class="font-mono text-[10px] text-muted">{projId}</span>
+    </div>
     <span
       aria-hidden="true"
-      class="text-zinc-400 transition group-hover:translate-x-0.5 group-hover:text-zinc-600 dark:group-hover:text-zinc-300"
+      class="text-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent print:hidden"
     >
-      →
+      ↗
     </span>
   </div>
-  <p class="text-sm text-zinc-600 dark:text-zinc-400">{project.tagline[lang]}</p>
-  <ul class="mt-1 flex flex-wrap gap-1.5">
-    {
-      project.tech.map((item) => (
-        <li class="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300">
-          {item}
-        </li>
-      ))
-    }
-  </ul>
+  <h3 class="font-semibold">{project.title[lang]}</h3>
+  <p class="text-sm text-muted">{project.tagline[lang]}</p>
+  {
+    project.tech && (
+      <ul class="mt-1 flex flex-wrap gap-1.5">
+        {project.tech.map((item) => (
+          <li class="rounded-full border border-line px-2.5 py-0.5 font-mono text-[11px] text-muted">
+            {item}
+          </li>
+        ))}
+      </ul>
+    )
+  }
 </a>

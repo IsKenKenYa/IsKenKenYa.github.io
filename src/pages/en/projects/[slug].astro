@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Icon from '../../../components/Icon.astro';
 import { resume, type Project } from '../../../data/resume';
 import { useTranslations } from '../../../i18n/utils';
 import type { Lang } from '../../../i18n/ui';
@@ -22,27 +23,52 @@ const t = useTranslations(lang);
 
 <BaseLayout
   lang={lang}
-  altUrl={`/projects/${project.slug}/`}
+  altUrl={`/en/projects/${project.slug}/`}
   title={`${project.title[lang]} · ${t('site.title')}`}
   description={project.description[lang]}
 >
   <a
     href="/en/"
-    class="text-sm text-zinc-500 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 print:hidden"
+    class="font-mono text-sm text-muted transition hover:text-accent print:hidden"
   >
     ← {t('project.backHome')}
   </a>
 
   <header class="mt-6">
-    <h1 class="text-3xl font-bold tracking-tight">{project.title[lang]}</h1>
-    <p class="mt-2 text-zinc-500 dark:text-zinc-400">{project.tagline[lang]}</p>
+    <div class="flex items-center gap-3">
+      {
+        project.logo ? (
+          <img src={project.logo} alt="" class="h-8 w-8 object-contain" loading="lazy" />
+        ) : (
+          <span class="text-accent">
+            <Icon name={project.icon} size={26} />
+          </span>
+        )
+      }
+      <h1 class="text-2xl font-bold tracking-tight sm:text-3xl">{project.title[lang]}</h1>
+    </div>
+    <p class="mt-2 text-muted">{project.tagline[lang]}</p>
+    <div class="mt-4 flex flex-wrap items-center gap-2 font-mono text-xs">
+      {
+        project.period && (
+          <span class="rounded border border-line px-2 py-1 text-muted">{project.period[lang]}</span>
+        )
+      }
+      {
+        project.status && (
+          <span class="rounded border border-accent/40 px-2 py-1 text-accent">
+            {project.status[lang]}
+          </span>
+        )
+      }
+    </div>
     {
       (project.links?.live || project.links?.repo) && (
-        <div class="mt-4 flex flex-wrap gap-4 text-sm font-medium">
+        <div class="mt-4 flex flex-wrap gap-3">
           {project.links?.live && (
             <a
               href={project.links.live}
-              class="text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-900 dark:text-zinc-100 dark:decoration-zinc-600 dark:hover:decoration-zinc-100"
+              class="flex items-center gap-1.5 rounded-md border border-accent/50 px-3 py-1.5 font-mono text-sm text-accent transition hover:bg-accent hover:text-bg"
             >
               {t('project.viewOnline')} ↗
             </a>
@@ -50,7 +76,7 @@ const t = useTranslations(lang);
           {project.links?.repo && (
             <a
               href={project.links.repo}
-              class="text-zinc-900 underline decoration-zinc-300 underline-offset-4 transition hover:decoration-zinc-900 dark:text-zinc-100 dark:decoration-zinc-600 dark:hover:decoration-zinc-100"
+              class="flex items-center gap-1.5 rounded-md border border-accent/50 px-3 py-1.5 font-mono text-sm text-accent transition hover:bg-accent hover:text-bg"
             >
               {t('project.sourceCode')} ↗
             </a>
@@ -62,40 +88,42 @@ const t = useTranslations(lang);
 
   <div class="mt-10 space-y-10">
     <section class="break-inside-avoid">
-      <h2
-        class="mb-3 text-xs font-semibold tracking-widest text-zinc-400 uppercase print:text-zinc-600 dark:text-zinc-500"
-      >
-        {t('project.overview')}
+      <h2 class="mb-3 font-mono text-xs font-medium tracking-widest text-muted uppercase">
+        <span class="text-accent">$</span> {t('project.overview')}
       </h2>
-      <p class="leading-7 text-zinc-700 dark:text-zinc-300">{project.description[lang]}</p>
+      <p class="leading-7 text-fg/90">{project.description[lang]}</p>
     </section>
 
-    <section class="break-inside-avoid">
-      <h2
-        class="mb-3 text-xs font-semibold tracking-widest text-zinc-400 uppercase print:text-zinc-600 dark:text-zinc-500"
-      >
-        {t('project.highlights')}
-      </h2>
-      <ul class="list-disc space-y-1.5 pl-5 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
-        {project.highlights[lang].map((point) => <li>{point}</li>)}
-      </ul>
-    </section>
+    {
+      project.highlights && (
+        <section class="break-inside-avoid">
+          <h2 class="mb-3 font-mono text-xs font-medium tracking-widest text-muted uppercase">
+            <span class="text-accent">$</span> {t('project.highlights')}
+          </h2>
+          <ul class="list-disc space-y-1.5 pl-5 text-sm leading-6 text-fg/90 marker:text-accent">
+            {project.highlights[lang].map((point) => (
+              <li>{point}</li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
 
-    <section class="break-inside-avoid">
-      <h2
-        class="mb-3 text-xs font-semibold tracking-widest text-zinc-400 uppercase print:text-zinc-600 dark:text-zinc-500"
-      >
-        {t('project.techStack')}
-      </h2>
-      <ul class="flex flex-wrap gap-1.5">
-        {
-          project.tech.map((item) => (
-            <li class="rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
-              {item}
-            </li>
-          ))
-        }
-      </ul>
-    </section>
+    {
+      project.tech && (
+        <section class="break-inside-avoid">
+          <h2 class="mb-3 font-mono text-xs font-medium tracking-widest text-muted uppercase">
+            <span class="text-accent">$</span> {t('project.techStack')}
+          </h2>
+          <ul class="flex flex-wrap gap-1.5">
+            {project.tech.map((item) => (
+              <li class="rounded-full border border-line bg-card px-3 py-1 font-mono text-[11px] text-fg/80">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
   </div>
 </BaseLayout>

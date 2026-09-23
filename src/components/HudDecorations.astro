@@ -1,0 +1,45 @@
+---
+/**
+ * 四角 HUD 装饰（致敬 imyan.ren，简化版）：
+ * 仅本地行为——计时器与鼠标坐标，不做 IP 定位、不读电池。
+ * 移动端隐藏；打印时由 print:hidden 剥掉。
+ */
+const hex = [...'Kenken']
+  .map((c) => c.charCodeAt(0).toString(16).padStart(2, '0'))
+  .join('')
+  .toUpperCase();
+---
+
+<div
+  aria-hidden="true"
+  class="pointer-events-none fixed inset-0 z-40 hidden font-mono text-[11px] text-accent/60 md:block print:hidden"
+>
+  <span class="absolute left-3 top-16">SYSTEM: ONLINE</span>
+  <span class="absolute right-3 top-16" id="hud-clock">T+ 00:00:00</span>
+  <span class="absolute bottom-3 left-3" id="hud-xy">X: 0000 · Y: 0000</span>
+  <span class="absolute bottom-3 right-3">DATA: 0x{hex}</span>
+</div>
+
+<script is:inline>
+  (() => {
+    const clock = document.getElementById('hud-clock');
+    const xy = document.getElementById('hud-xy');
+    const pad = (n) => String(n).padStart(2, '0');
+    if (clock) {
+      const start = Date.now();
+      setInterval(() => {
+        const s = Math.floor((Date.now() - start) / 1000);
+        clock.textContent = `T+ ${pad(Math.floor(s / 3600))}:${pad(Math.floor((s % 3600) / 60))}:${pad(s % 60)}`;
+      }, 1000);
+    }
+    if (xy) {
+      addEventListener(
+        'mousemove',
+        (e) => {
+          xy.textContent = `X: ${String(e.clientX).padStart(4, '0')} · Y: ${String(e.clientY).padStart(4, '0')}`;
+        },
+        { passive: true },
+      );
+    }
+  })();
+</script>
