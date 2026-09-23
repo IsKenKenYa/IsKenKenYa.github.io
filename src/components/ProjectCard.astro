@@ -7,48 +7,49 @@ interface Props {
   project: Project;
   lang: Lang;
   href: string;
-  index: number;
 }
 
-const { project, lang, href, index } = Astro.props;
-const projId = `PROJ_ID_${String(index + 1).padStart(3, '0')}`;
+const { project, lang, href } = Astro.props;
 ---
 
 <a
   href={href}
-  class="terminal-card group flex flex-col gap-2.5 rounded-lg border border-line bg-card p-6 print:break-inside-avoid"
+  class="terminal-card group flex items-start gap-4 rounded-lg border border-line bg-card p-5 print:break-inside-avoid"
 >
-  <div class="flex items-center justify-between gap-3">
-    <div class="flex items-center gap-3">
-      {
-        project.logo ? (
-          <img src={project.logo} alt="" class="h-5 w-5 object-contain" loading="lazy" />
-        ) : (
-          <span class="text-accent">
-            <Icon name={project.icon} size={20} />
-          </span>
-        )
-      }
-      <span class="font-mono text-xs text-muted">{projId}</span>
-    </div>
-    <span
-      aria-hidden="true"
-      class="text-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent print:hidden"
-    >
-      ↗
-    </span>
+  <div
+    class="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg border border-line bg-bg"
+  >
+    {
+      project.logo ? (
+        <img src={project.logo} alt="" class="h-10 w-10 object-contain" loading="lazy" />
+      ) : (
+        <span class="text-accent">
+          <Icon name={project.icon} size={26} />
+        </span>
+      )
+    }
   </div>
-  <h3 class="text-lg font-semibold">{project.title[lang]}</h3>
-  <p class="text-sm text-muted">{project.tagline[lang]}</p>
-  {
-    project.tech && (
-      <ul class="mt-1 flex flex-wrap gap-1.5">
-        {project.tech.map((item) => (
-          <li class="rounded-full border border-line px-3 py-1 font-mono text-xs text-muted">
-            {item}
-          </li>
-        ))}
-      </ul>
-    )
-  }
+  <div class="min-w-0 flex-1">
+    <div class="flex items-center justify-between gap-3">
+      <h3 class="text-lg font-semibold">{project.title[lang]}</h3>
+      <span
+        aria-hidden="true"
+        class="text-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent print:hidden"
+      >
+        ↗
+      </span>
+    </div>
+    <p class="mt-1 text-sm text-muted">{project.tagline[lang]}</p>
+    {
+      project.tech && (
+        <ul class="mt-2.5 flex flex-wrap gap-1.5">
+          {project.tech.map((item) => (
+            <li class="rounded-full border border-line px-2.5 py-0.5 font-mono text-xs text-muted">
+              {item}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
 </a>
