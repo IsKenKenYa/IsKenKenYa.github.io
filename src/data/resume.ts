@@ -181,22 +181,16 @@ export const resume = {
 
   honors: [
     {
-      label: { zh: '学科竞赛', en: 'Competitions' },
+      label: { zh: '竞赛获奖', en: 'Competition awards' },
       items: {
-        zh: ['蓝桥杯', '软件测试竞赛', '软件设计竞赛', '职业技能大赛'],
-        en: [
-          'Lanqiao Cup (Blue Bridge Cup)',
-          'Software Testing Competition',
-          'Software Design Competition',
-          'Vocational Skills Competition',
+        zh: [
+          '2025 年福建省职业院校技能大赛「网络系统管理」赛项 · 三等奖',
+          '2024 一带一路暨金砖国家技能发展与技术创新大赛 · 首届鸿蒙端云智能应用开发赛项（华东、华南选拔赛）',
         ],
-      },
-    },
-    {
-      label: { zh: '校级荣誉', en: 'University honors' },
-      items: {
-        zh: ['校级奖学金', '校优秀学生', '校优秀干部'],
-        en: ['University scholarship', 'Outstanding Student', 'Outstanding Student Leader'],
+        en: [
+          '2025 Fujian Vocational College Skills Competition, Network System Management — 3rd Prize',
+          '2024 Belt & Road and BRICS Skills Competition — 1st HarmonyOS Cloud-Device Intelligent App Development (East & South China trials)',
+        ],
       },
     },
     {
@@ -354,21 +348,19 @@ export const resume = {
         en: 'Note-matching & timed Q&A social app',
       },
       description: {
-        zh: '基于 OpenIM 的聊天交友 App（Android / iOS）：以「纸条消息」和「限时问答」做无压力社交（匿名 / 半匿名）。Flutter 客户端基于 OpenIM demo 按客户设计稿深度修改（含 uniapp → Flutter 全栈迁移）；我同时负责项目管理，并以 Python 自研服务端完成 OpenIM 业务适配——过程相当曲折。这是我第一个用 vibe coding 完整交付的产品，项目已移交。',
-        en: 'An OpenIM-based chat & friendship app for Android and iOS, built around "note messages" and timed Q&A for low-pressure, semi-anonymous socializing. The Flutter client started from the OpenIM demo and was deeply reworked to the client’s design drafts (including the uniapp → Flutter migration); I also ran project management and wrote a custom Python server layer adapting OpenIM — a bumpy road. My first product shipped end-to-end in a vibe-coding style, since handed over.',
+        zh: '基于 OpenIM 的聊天交友 App（Android / iOS）：以「纸条消息」和「限时问答」做无压力社交（匿名 / 半匿名）。我负责 Flutter 客户端与前端项目管理：基于 OpenIM demo 按客户设计稿深度修改（含 uniapp → Flutter 全栈迁移），对接客户提供的接口——适配过程相当曲折。这是我第一个用 vibe coding 完整交付的产品，项目已移交。',
+        en: 'An OpenIM-based chat & friendship app for Android and iOS, built around "note messages" and timed Q&A for low-pressure, semi-anonymous socializing. I owned the Flutter client and frontend PM: the OpenIM demo deeply reworked to the client’s design drafts (including the uniapp → Flutter migration), integrating APIs provided by the client — a bumpy road. My first product shipped end-to-end in a vibe-coding style, since handed over.',
       },
-      tech: ['Flutter', 'OpenIM', 'Python'],
+      tech: ['Flutter', 'OpenIM'],
       highlights: {
         zh: [
           '产品形态：纸条匹配（遇见未知的缘分）+ 限时问答社区，匿名 / 半匿名无压力社交',
-          '即时通讯：基于 OpenIM，以 Python 自研服务端完成业务适配',
-          'Flutter 客户端（Android / iOS）：基于 OpenIM demo 按客户设计稿深度修改，完成 uniapp → Flutter 全栈迁移与性能优化',
+          'Flutter 客户端（Android / iOS）：基于 OpenIM demo 按客户设计稿深度修改，完成 uniapp → Flutter 全栈迁移；后端接口由客户提供，前端适配过程相当曲折',
           '我的第一个 vibe coding 产物，也是项目管理与 Flutter 工程管理的一次完整练手；项目现已移交',
         ],
         en: [
           'Product: note-matching + timed Q&A community for low-pressure, semi-anonymous socializing',
-          'Instant messaging: OpenIM-based, with a custom Python server layer for business adaptation',
-          'Flutter client (Android / iOS): OpenIM demo deeply reworked to the client’s design drafts, plus the uniapp → Flutter migration and performance tuning',
+          'Flutter client (Android / iOS): OpenIM demo deeply reworked to the client’s design drafts, completing the uniapp → Flutter migration; backend APIs were provided by the client and the frontend adaptation was a bumpy road',
           'My first vibe-coding product and a complete exercise in PM & Flutter engineering management; since handed over',
         ],
       },
