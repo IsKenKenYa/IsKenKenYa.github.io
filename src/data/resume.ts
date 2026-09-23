@@ -135,6 +135,7 @@ export const resume = {
   experience: [
     {
       company: '福建星美夸克数字科技有限公司',
+      role: { zh: '全栈工程师', en: 'Full-stack Engineer' },
       period: '2026.06 – 至今',
       points: {
         zh: [
@@ -353,20 +354,21 @@ export const resume = {
         en: 'Note-matching & timed Q&A social app',
       },
       description: {
-        zh: '基于 OpenIM 的聊天交友 App：用「纸条消息」和「限时问答」做无压力社交（匿名 / 半匿名）。我负责 Flutter 客户端（含 uniapp → Flutter 的全栈迁移）与项目管理，并以 Python 自研服务端完成 OpenIM 的业务适配——过程相当曲折。这是我第一个用 vibe coding 方式完整交付的产品，项目已移交运营。',
-        en: 'An OpenIM-based chat & friendship app built around "note messages" and timed Q&A for low-pressure, semi-anonymous socializing. I built the Flutter client (including the full uniapp → Flutter migration), ran project management, and wrote a custom Python server layer adapting OpenIM — a bumpy road. My first product shipped end-to-end in a vibe-coding style, since handed over.',
+        zh: '基于 OpenIM 的聊天交友 App（Android / iOS）：以「纸条消息」和「限时问答」做无压力社交（匿名 / 半匿名）。Flutter 客户端基于 OpenIM demo 按客户设计稿深度修改（含 uniapp → Flutter 全栈迁移）；我同时负责项目管理，并以 Python 自研服务端完成 OpenIM 业务适配——过程相当曲折。这是我第一个用 vibe coding 完整交付的产品，项目已移交。',
+        en: 'An OpenIM-based chat & friendship app for Android and iOS, built around "note messages" and timed Q&A for low-pressure, semi-anonymous socializing. The Flutter client started from the OpenIM demo and was deeply reworked to the client’s design drafts (including the uniapp → Flutter migration); I also ran project management and wrote a custom Python server layer adapting OpenIM — a bumpy road. My first product shipped end-to-end in a vibe-coding style, since handed over.',
       },
+      tech: ['Flutter', 'OpenIM', 'Python'],
       highlights: {
         zh: [
           '产品形态：纸条匹配（遇见未知的缘分）+ 限时问答社区，匿名 / 半匿名无压力社交',
           '即时通讯：基于 OpenIM，以 Python 自研服务端完成业务适配',
-          '独立完成 uniapp → Flutter 的全栈迁移：UI 还原、虚拟滚动、图片懒加载、WebP 压缩，并同步重构安全机制',
+          'Flutter 客户端（Android / iOS）：基于 OpenIM demo 按客户设计稿深度修改，完成 uniapp → Flutter 全栈迁移与性能优化',
           '我的第一个 vibe coding 产物，也是项目管理与 Flutter 工程管理的一次完整练手；项目现已移交',
         ],
         en: [
           'Product: note-matching + timed Q&A community for low-pressure, semi-anonymous socializing',
           'Instant messaging: OpenIM-based, with a custom Python server layer for business adaptation',
-          'Solo uniapp → Flutter migration: UI reproduction, virtual scrolling, lazy image loading, WebP compression, plus a security-layer rework',
+          'Flutter client (Android / iOS): OpenIM demo deeply reworked to the client’s design drafts, plus the uniapp → Flutter migration and performance tuning',
           'My first vibe-coding product and a complete exercise in PM & Flutter engineering management; since handed over',
         ],
       },
