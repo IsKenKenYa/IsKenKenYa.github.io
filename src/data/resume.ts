@@ -255,13 +255,13 @@ export const resume = {
       highlights: {
         zh: [
           '对话式画布：基于 Excalidraw 的无限画布，Agent 理解画布上下文，生成 / 编辑 / 排版多轮迭代',
-          '多模型矩阵：Imagen、DALL-E、GPT Image 与 Replicate 13+ 图像模型；Veo 3.x、Kling、Sora 等视频生成',
+          '多模型矩阵：图像接入 Seedream、GPT Image 2 / 2.5、Nano Banana 2（Pro / Lite）等；视频接入 Seedance（2 / mini / fast / 2.5）与 MiniMax Hailuo（H3）等',
           'Agent 工程：LangGraph ReAct 循环 + deepagents，Redis / BullMQ Worker 承载异步生成任务',
           '商业化与基建：挖豆积分 + LemonSqueezy 订阅、阿里云 OSS / MinIO 双存储适配、SearXNG 双路由联网搜索、Vue 3 后台管理',
         ],
         en: [
           'Conversational canvas: an infinite Excalidraw canvas whose agent understands on-canvas context across multi-turn generate / edit / layout flows',
-          'Model matrix: Imagen, DALL-E, GPT Image plus 13+ Replicate image models; video via Veo 3.x, Kling, Sora and more',
+          'Model matrix: image generation via Seedream, GPT Image 2 / 2.5, Nano Banana 2 (Pro / Lite) and more; video via Seedance (2 / mini / fast / 2.5) and MiniMax Hailuo (H3)',
           'Agent engineering: LangGraph ReAct loop with deepagents; Redis / BullMQ workers power async generation',
           'Commerce & infra: credits + LemonSqueezy subscriptions, Aliyun OSS / MinIO dual storage, SearXNG dual-route web search, Vue 3 admin console',
         ],
