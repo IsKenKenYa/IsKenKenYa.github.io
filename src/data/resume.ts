@@ -233,15 +233,30 @@ export const resume = {
       slug: 'woowuagent',
       icon: 'sparkles',
       logo: '/logos/woowuagent.png',
-      status: { zh: '已上线', en: 'Live' },
+      status: { zh: '已上线 · 内部商业项目', en: 'Live · internal commercial product' },
       title: { zh: 'WoowuAgent — AI 创意工作台', en: 'WoowuAgent — AI Creative Workbench' },
       tagline: {
-        zh: '基于 Agent 的 AIGC 创作平台（类 Lovart）',
-        en: 'Agent-based AIGC creation platform (Lovart-like)',
+        zh: '挖物（Woowu）旗下 · 基于 Agent 的 AIGC 创作平台',
+        en: 'Woowu’s agent-based AIGC creation platform',
       },
       description: {
-        zh: 'AI 驱动的创意工作台：以 Agent 驱动多模态创作流程，已上线运营（wa.woowuclub.com）。',
-        en: 'An AI-driven creative workbench: agent-driven multimodal creation flows, live at wa.woowuclub.com.',
+        zh: '挖物（Woowu）旗下 AI 创作平台（内部商业项目，已上线 wa.woowuclub.com）：在无限画布上与 AI 对话进行创作，对标 Lovart / Canva 的产品形态，数据私有、可私有化部署。',
+        en: 'Woowu’s AI creation platform (internal commercial product, live at wa.woowuclub.com): create on an infinite canvas by talking to an agent — a Lovart / Canva-style workspace that is data-private and self-hostable.',
+      },
+      tech: ['Next.js 15', 'React 19', 'Fastify 5', 'LangGraph', 'Excalidraw', 'BullMQ', 'PostgreSQL'],
+      highlights: {
+        zh: [
+          '对话式画布：基于 Excalidraw 的无限画布，Agent 理解画布上下文，生成 / 编辑 / 排版多轮迭代',
+          '多模型矩阵：Imagen、DALL-E、GPT Image 与 Replicate 13+ 图像模型；Veo 3.x、Kling、Sora 等视频生成',
+          'Agent 工程：LangGraph ReAct 循环 + deepagents，Redis / BullMQ Worker 承载异步生成任务',
+          '商业化与基建：挖豆积分 + LemonSqueezy 订阅、阿里云 OSS / MinIO 双存储适配、SearXNG 双路由联网搜索、Vue 3 后台管理',
+        ],
+        en: [
+          'Conversational canvas: an infinite Excalidraw canvas whose agent understands on-canvas context across multi-turn generate / edit / layout flows',
+          'Model matrix: Imagen, DALL-E, GPT Image plus 13+ Replicate image models; video via Veo 3.x, Kling, Sora and more',
+          'Agent engineering: LangGraph ReAct loop with deepagents; Redis / BullMQ workers power async generation',
+          'Commerce & infra: credits + LemonSqueezy subscriptions, Aliyun OSS / MinIO dual storage, SearXNG dual-route web search, Vue 3 admin console',
+        ],
       },
       links: {
         live: 'https://wa.woowuclub.com',
