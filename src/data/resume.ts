@@ -153,11 +153,11 @@ export const resume = {
       points: {
         zh: [
           '全栈开发 visionflow.im 与 terln.com 跨境电商平台',
-          '基于 LangChain 实现类 n8n / Dify 的工作流系统',
+          '基于 n8n 搭建工作流自动化（配合 LangChain）',
         ],
         en: [
           'Full-stack development of the visionflow.im and terln.com cross-border e-commerce platforms',
-          'Built an n8n / Dify-style workflow system on LangChain',
+          'Built workflow automation on n8n (with LangChain)',
         ],
       },
     },
@@ -225,22 +225,26 @@ export const resume = {
       status: { zh: '已上线 · SaaS 多域名', en: 'Live · SaaS, multiple domains' },
       title: { zh: 'VisionFlow — AI 生图生视频平台', en: 'VisionFlow — AI Image & Video Platform' },
       tagline: {
-        zh: '从 0 到 1 并已上线运营的 AIGC 平台',
-        en: 'An AIGC platform taken from zero to production',
+        zh: '从 0 到 1 的跨境电商 AIGC 平台，已上线运营',
+        en: 'A cross-border e-commerce AIGC platform, from zero to production',
       },
       description: {
-        zh: '参与从 0 到 1 构建多模态 AIGC 平台（文生图 / 文生视频 / 工作流编排），聚焦任务调度、资金安全与商业化闭环。平台已上线，以多域名、多品牌 SaaS 形式运营（另一品牌为图灵 Terln）。',
-        en: 'Took part in building a multimodal AIGC platform (text-to-image / text-to-video / workflow orchestration) from zero to launch, focusing on task scheduling, billing safety and commercialization. It now runs as a multi-domain, multi-brand SaaS (another brand: Terln).',
+        zh: '参与从 0 到 1 构建多模态 AIGC 平台（文生图 / 文生视频 / 工作流编排），面向跨境电商场景：商品主图 / 详情页批量生图。平台已上线，以多域名、多品牌 SaaS 形式运营（另一品牌为图灵 Terln）。',
+        en: 'Took part in building a multimodal AIGC platform (text-to-image / text-to-video / workflow orchestration) from zero to launch, aimed at cross-border e-commerce: batch generation of product main images and detail pages. It now runs as a multi-domain, multi-brand SaaS (another brand: Terln).',
       },
-      tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Redis'],
+      tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Redis', 'n8n'],
       highlights: {
         zh: [
+          '跨境电商场景：商品主图 / 详情页批量生图，官方工作流开箱即用，支持发布社区工作流',
+          '工作流编排：基于 n8n 构建工作流体系，画布为自研实现',
           '任务调度：将任务提交与执行异步解耦，基于分布式队列实现分级调度与优先级控制',
           '计费引擎：实现「冻结 – 确认 – 释放」的余额预授权模型，支撑批量任务计费与异常回滚',
           '模型接入：多供应商智能路由与熔断降级，配合密钥轮询与结果缓存控制调用成本',
           '工程实践：后台监控面板、接口规范与部署文档，支持灰度发布与快速回滚',
         ],
         en: [
+          'E-commerce focus: batch generation of product main images and detail pages; official workflows out of the box, community workflows publishable',
+          'Workflow orchestration: built on n8n, with a self-developed canvas',
           'Task scheduling: decoupled submission from execution with a distributed queue for tiered, prioritized dispatch',
           'Billing engine: a freeze-confirm-release balance pre-authorization model supporting batch billing and rollback on failure',
           'Model integration: multi-provider routing with circuit breakers; key rotation and result caching to keep costs down',
